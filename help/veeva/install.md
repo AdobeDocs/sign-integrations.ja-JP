@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 63a34c2d77ba7a262670da624c86a3730de0fdc5
+source-git-commit: d8b7271cae9bcbe8b66311eba0317b8937ea855c
 workflow-type: tm+mt
-source-wordcount: '2772'
+source-wordcount: '2839'
 ht-degree: 2%
 
 ---
@@ -24,6 +24,16 @@ ht-degree: 2%
 ## 概要 {#overview}
 
 このドキュメントでは、Adobe Signと[!DNL Veeva Vault]プラットフォームの統合を確立する方法について説明します。 [!DNL Veeva Vault] は、ライフサイエンス向けに構築されたECM（エンタープライズ・コンテンツ管理）プラットフォームです。「Vault」は、規制の申請、調査報告、アプリケーションの交付、一般契約などの一般的な用途を持つコンテンツおよびデータ・リポジトリです。 1つの企業に複数の「Vault」を設定し、個別に管理する必要があります。
+
+統合を完了するための高レベルの手順は次のとおりです。
+
+* Adobe Signで管理アカウントを有効にする（新規のお客様のみ）
+* Vault内の免除承諾ライフサイクルの履歴を追跡するオブジェクトを作成します。
+* 新しいセキュリティプロファイルを作成します。
+* [!DNL Veeva Vault]統合ユーザーを保持するように、Adobe Signでグループを設定します。
+* ドキュメントのフィールドとレンディションを作成します。
+* Webアクションを設定し、ドキュメントのライフサイクルを更新します。
+* ドキュメントタイプのユーザーとユーザーロールの設定を作成します。
 
 ## [!DNL Veeva Vault]の構成
 

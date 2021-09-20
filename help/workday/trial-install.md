@@ -12,7 +12,7 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: beafe6c0-262f-4f5b-9315-a023a4eef4a2
-source-git-commit: d462ccf41fa5483cfa02f5eaf154c23f26157a1e
+source-git-commit: ba5e0fccfdb7cd278cc0ae57dc03da1e17b51577
 workflow-type: tm+mt
 source-wordcount: '998'
 ht-degree: 32%
@@ -163,6 +163,6 @@ Adobe Sign のユーザーは、カスタマーサクセスマネージャー（
 
 * [文書へのアドビのテキストタグの追加](https://adobe.com/go/adobesign_text_tag_guide)
 
-* [文書の構成と例の確認](https://experienceleague.adobe.com/docs/dc-sign-integrations/using/workday/quick-start.html)
+* [文書の構成と例の確認](https://www.adobe.com/go/adobesign_workday_quick_start)
 
 [**Adobe Sign サポートへのお問い合わせ**](https://adobe.com/go/adobesign-support-center)
