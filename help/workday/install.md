@@ -12,7 +12,7 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 8f12b524-2123-45d4-98d5-b2b23580a5ea
-source-git-commit: ba5e0fccfdb7cd278cc0ae57dc03da1e17b51577
+source-git-commit: 78d6cafa720b41bd638c2ef723b2d4a2def19cd5
 workflow-type: tm+mt
 source-wordcount: '1133'
 ht-degree: 21%
@@ -170,7 +170,7 @@ Adobe Sign は統合パートナーです。この統合で署名を取得でき
 Adobe Sign のユーザーは、カスタマーサクセスマネージャー（CSM）に連絡してサポートを受ける必要があります。または、アドビテクニカルサポートに連絡していただくこともできます。その場合は、1-866-318-4100 に電話し、製品リストが読み上げられるのを待って、指示に従って 4、2 の順番に番号を入力します。
 
 * [Adobeテキストタグのドキュメントへの追加](https://adobe.com/go/adobesign_text_tag_guide)
-* [ドキュメントの構成と例の確認](https://www.adobe.com/go/adobesign_workday_quick_start)
+* [ドキュメントの構成と例の確認](https://www.adobe.com//go/adobesign_workday_quick_start)
 
 ## よくある質問 {#faq}
 
