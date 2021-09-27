@@ -12,10 +12,10 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: beafe6c0-262f-4f5b-9315-a023a4eef4a2
-source-git-commit: 3f826e88969562a69279a29dfdd98775ec01fd51
+source-git-commit: c25be043b404e9bf7a90496d4e47c1f22069313d
 workflow-type: tm+mt
-source-wordcount: '1000'
-ht-degree: 32%
+source-wordcount: '995'
+ht-degree: 31%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 32%
 
 ## 概要 {#overview}
 
-このドキュメントは、[!DNL Workday]様がAdobe Signで試用版アカウントをアクティブ化し、[!DNL Workday]テナントに統合する方法を学ぶのに役立つように設計されています。 [!DNL Workday]内でAdobe Signを使用するには、次のような[!DNL Workday]アイテムの作成と変更方法を知る必要があります。
+このドキュメントは、[!DNL Workday]様がAdobe Signで試用版アカウントをアクティブ化し、[!DNL Workday]テナントに統合する方法を学ぶのに役立つように設計されています。 [!DNL Workday]内でAdobe Signを使用するには、次のような[!DNL Workday]アイテムの作成と変更の方法を知っている必要があります。
 
 * ビジネスプロセスフレームワーク
 * テナントの設定と構成
@@ -49,7 +49,7 @@ ht-degree: 32%
 
 ![Adobe Sign からのようこそメール](images/welcome-email-2020.png)
 
-電子メールの指示に従って、アカウントを初期化し、Adobe Sign [!UICONTROL ホーム]ページにアクセスします。
+アカウントを初期化し、Adobe Sign [!UICONTROL ホーム]ページにアクセスするには、電子メールの指示に従ってください。
 
 ![Adobe Signダッシュボード](images/classic-home.png)
 
@@ -165,4 +165,4 @@ Adobe Sign のユーザーは、カスタマーサクセスマネージャー（
 
 * [ドキュメントの構成と例](https://www.adobe.com//go/adobesign_workday_quick_start){target=&quot;_blank&quot;}の確認
 
-[**Adobe Sign サポートへのお問い合わせ**](https://adobe.com/go/adobesign-support-center)
+[**Adobe Sign サポートへのお問い合わせ**](https://www.adobe.com/go/adobesign-support-center)
