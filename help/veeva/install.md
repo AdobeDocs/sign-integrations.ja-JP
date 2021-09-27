@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: d8b7271cae9bcbe8b66311eba0317b8937ea855c
+source-git-commit: 3f826e88969562a69279a29dfdd98775ec01fd51
 workflow-type: tm+mt
-source-wordcount: '2839'
+source-wordcount: '3061'
 ht-degree: 2%
 
 ---
@@ -23,17 +23,21 @@ ht-degree: 2%
 
 ## 概要 {#overview}
 
-このドキュメントでは、Adobe Signと[!DNL Veeva Vault]プラットフォームの統合を確立する方法について説明します。 [!DNL Veeva Vault] は、ライフサイエンス向けに構築されたECM（エンタープライズ・コンテンツ管理）プラットフォームです。「Vault」は、規制の申請、調査報告、アプリケーションの交付、一般契約などの一般的な用途を持つコンテンツおよびデータ・リポジトリです。 1つの企業に複数の「Vault」を設定し、個別に管理する必要があります。
+このドキュメントでは、Adobe Signと[!DNL Veeva Vault]プラットフォームの統合を確立する方法について説明します。 [!DNL Veeva Vault] は、ライフサイエンス向けに構築されたECM（エンタープライズ・コンテンツ管理）プラットフォームです。「Vault」は、規制の申請、調査報告、アプリケーションの交付、一般契約などの一般的な用途を持つコンテンツおよびデータ・リポジトリです。 1つの企業に複数の「Vault」を設定できます。これらは別々に管理する必要があります。
 
 統合を完了するための高レベルの手順は次のとおりです。
 
 * Adobe Signで管理アカウントを有効にする（新規のお客様のみ）
-* Vault内の免除承諾ライフサイクルの履歴を追跡するオブジェクトを作成します。
+* Vaultで免除承諾ライフサイクルの履歴を追跡するオブジェクトを作成します。
 * 新しいセキュリティプロファイルを作成します。
 * [!DNL Veeva Vault]統合ユーザーを保持するように、Adobe Signでグループを設定します。
 * ドキュメントのフィールドとレンディションを作成します。
 * Webアクションを設定し、ドキュメントのライフサイクルを更新します。
 * ドキュメントタイプのユーザーとユーザーロールの設定を作成します。
+
+>[!NOTE]
+>
+>Adobe Sign管理者は、Adobe Sign内でAdobe Signの設定手順を実行する必要があります。
 
 ## [!DNL Veeva Vault]の構成
 
@@ -46,7 +50,7 @@ Adobe Signとの統合用に[!DNL Veeva Vault]を設定するには、Vaultで�
 
 ### Signatureオブジェクトの作成  {#create-signature-object}
 
-契約に関連する情報を格納するために、署名オブジェクトが作成されます。 Signureオブジェクトは、次の特定のフィールドに関する情報を含むデータベースです。
+契約に関連する情報を格納するために、署名オブジェクトが作成されます。 Signatureオブジェクトは、次の特定のフィールドの下に情報を含むデータベースです。
 
 **Signatureオブジェクトフィールド**
 
@@ -86,7 +90,7 @@ Adobe Signとの統合用に[!DNL Veeva Vault]を設定するには、Vaultで�
 
 ### Create Signature Eventオブジェクト  {#create-signature-event}
 
-承諾のイベント関連情報を格納するために、署名イベントオブジェクトが作成されます。 次の特定のフィールドに関する情報が含まれます。
+Signature Eventオブジェクトは、免除承諾のイベント関連情報を格納するために作成されます。 次の特定のフィールドに関する情報が含まれます。
 
 | フィールド | ラベル | タイプ | 説明 |
 | --- | --- | ---| --- | 
@@ -158,13 +162,13 @@ Adobe Signとの統合を確立するには、管理者は次の2つの新しい
 
 ![署名フィールドの詳細の画像](images/signature-field-details.png)
 
-管理者は、既存の共有フィールド&#x200B;*「Vaultオーバーレイを無効にする」(disable_vault_overlays__v)*&#x200B;を追加し、Adobe署名に適したすべての文書型に対して「アクティブ」に設定する必要があります。 必要に応じて、このフィールドには、Adobe Sign Adminグループのメンバーのみがその値を更新できる特定のセキュリティを設定できます。
+管理者は、既存の共有フィールド&#x200B;*「Vaultオーバーレイを無効にする」(disable_vault_overlays__v)*&#x200B;を追加し、Adobe署名に適したすべてのドキュメントタイプに対して「アクティブ」に設定する必要があります。 必要に応じて、このフィールドには、Adobe Sign Adminグループのメンバーのみがその値を更新できる特定のセキュリティを設定できます。
 
 ![Adobe署名ユーザー操作の許可の画像](images/allow-adobe-sign-user-actions.png)
 
 ## ドキュメントのレンディションの作成 {#create-renditions}
 
-管理者は、Vault統合で署名済みのPDFドキュメントをAdobe Signにアップロードする際に使用される、*Adobe Sign Rendition (adobe_sign_rendition__c)*&#x200B;という新しいレンディションタイプを作成する必要があります。 Adobe Signレンディションは、Adobe Signatureに適した各文書型に対して宣言する必要があります。
+管理者は、Vault統合で署名済みのPDFドキュメントをAdobe Signにアップロードする際に使用する、*Adobe Sign Rendition (adobe_sign_rendition__c)*&#x200B;という新しいレンディションタイプを作成する必要があります。 Adobe Signレンディションは、Adobe Signatureに適した各文書型に対して宣言する必要があります。
 
 ![レンディションの種類のイメージ](images/rendition-type.png)
 
@@ -277,6 +281,53 @@ VaultドキュメントをAdobe Signに送信する場合、その状態は免�
 >
 >ユーザーロール設定オブジェクトに、ドキュメントタイプグループオブジェクトを参照するフィールドが含まれていない場合は、このフィールドを追加する必要があります。
 
+## ミドルウェアを使用して[!DNL Veeva Vault]をAdobe Signに接続 {#connect-middleware}
+
+Adobe Signアカウント管理者は、次の手順に従って、ミドルウェアを使用して[!DNL Veeva Vault]をAdobe Signに接続する必要があります。
+
+1. [Adobe Sign forHomeページに移 [!DNL Veeva Vault] 動します](https://static.adobesigncdn.com/veevavaultintsvc/index.html)。
+1. 右上隅から[**[!UICONTROL ログイン]**]を選択します。
+
+   ![ミドルウェアログインのイメージ](images/middleware_login.png)
+
+1. 開いたAdobe署名のログインページで、アカウント管理者の電子メールとパスワードを入力し、[****&#x200B;で使用]を選択します。
+
+   ![画像](images/middleware-signin.png)
+
+   ユーザーがサインインすると、ページの右上隅に関連付けられた電子メールIDと、次に示す追加の[設定]タブが表示されます。
+
+   ![画像](images/middleware_settings.png)
+
+1. [**[!UICONTROL 設定]**]タブを選択します。
+
+   次に示すように、[設定]ページに使用可能な接続が表示され、最初の接続設定の場合は[なし]が表示されます。
+
+   ![画像](images/middleware_newconnection.png)
+
+1. **[!UICONTROL 「接続を追加]**」を選択して、新しい接続を追加します。
+
+1. 開いた[接続の追加]ダイアログで、[!DNL Veeva Vault]資格情報を含む必要な詳細情報を入力します。
+
+   Adobe Sign Credentialsは、最初のAdobe Signログインから自動的に入力されます。
+
+   ![画像](images/middleware_addconnection.png)
+
+1. **[!UICONTROL [検証]**]を選択して、アカウントの詳細を検証します。
+
+   検証に成功すると、次に示すように、「ユーザーが正常に検証されました」という通知が表示されます。
+
+   ![画像](images/middleware_validated.png)
+
+1. 特定のAdobe署名グループに使用を制限するには、**[!UICONTROL 「グループ]**」ドロップダウンリストを展開し、使用可能なグループの1つを選択します。
+
+   ![画像](images/middleware_group.png)
+
+1. **[!UICONTROL [保存]]**&#x200B;を選択して、新しい接続を保存します。
+
+   「設定」タブの下に、[!DNL Veeva Vault]とAdobe Signの統合が正常に行われたことを示す新しい接続が表示されます。
+
+   ![画像](images/middleware_setup.png)
+
 ## パッケージの導入ライフサイクル {#deployment-lifecycle}
 
 ### 一般的な導入ライフサイクル {#general-deployment}
@@ -287,7 +338,7 @@ VaultドキュメントをAdobe Signに送信する場合、その状態は免�
 
 **手順 3.** パッケージを配備します。
 
-**手順4.** &#39;Adobe Sign Admin Group&#39;という名前の新しいユーザー管理グループを作成します。
+**手順4.** 「Adobe Sign Admin Group」という名前の新しいユーザー管理グループを作成します。
 
 **手順5.** セキュリティプロファイル「Adobe Sign Integration Profile」を使用してIntegration Userプロファイルを作成し、Adobe Sign Admin Groupに割り当てます。
 
