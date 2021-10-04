@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 2a8cd053744fdd5dbb4b97a861e7d29e0722779f
+source-git-commit: a262c45fa21bf5d7d0536588d2a621c50d1e8fa0
 workflow-type: tm+mt
-source-wordcount: '3039'
+source-wordcount: '3090'
 ht-degree: 2%
 
 ---
@@ -283,9 +283,9 @@ VaultドキュメントをAdobe Signに送信する場合、その状態は免�
 
 ## ミドルウェアを使用して[!DNL Veeva Vault]をAdobe Signに接続 {#connect-middleware}
 
-Adobe Signアカウント管理者は、次の手順に従って、ミドルウェアを使用して[!DNL Veeva Vault]をAdobe Signに接続する必要があります。
+[!DNL Veeva Vault]とAdobe Sign Adminアカウントの設定が完了したら、管理者はミドルウェアを使用して2つのアカウント間の接続を作成する必要があります。 [!DNL Veeva Vault]とAdobe Signアカウント接続は、Adobe Sign Identityによって開始され、Veeva Vault IDの保存に使用されます。 Adobe Signアカウント管理者は、次の手順に従って、ミドルウェアを使用して[!DNL Veeva Vault]をAdobe Signに接続する必要があります。
 
-1. [!DNL Veeva Vault]のAdobe Signのホームページに移動します。
+1. [ [!DNL Veeva Vault] ホームページ](https://static.adobesigncdn.com/veevavaultintsvc/index.html)のAdobe Signに移動します。
 1. 右上隅から[**[!UICONTROL ログイン]**]を選択します。
 
    ![ミドルウェアログインのイメージ](images/middleware_login.png)
