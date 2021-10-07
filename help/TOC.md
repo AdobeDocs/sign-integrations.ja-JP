@@ -2,10 +2,10 @@
 user-guide-title: Adobe Sign統合ガイド
 index: true
 role: Leader
-source-git-commit: 5ac9dc27dcdb6cab19281e6aafd4ea0524cc01d6
+source-git-commit: 27610773d47a947dbfa1deb3f594667406a9aefb
 workflow-type: tm+mt
-source-wordcount: '48'
-ht-degree: 22%
+source-wordcount: '70'
+ht-degree: 32%
 
 ---
 
@@ -25,4 +25,9 @@ ht-degree: 22%
 + Veeva Vault用Adobe Sign {#veeva}
    + [インストールガイド](veeva/install.md)
    + [ユーザーガイド](veeva/user.md)
++ NetSuite 用 Adobe Sign {#netsuite}
+   + [NetSuite 用 Adobe Sign リリースノート](netsuite/release-notes.md)
+   + [Adobe Sign for NetSuiteインストールガイド](netsuite/install.md)
++ SugarCrm用Adobe Sign {#sugarcrm}
+   + [インストールガイド](sugarcrm/install.md)
 

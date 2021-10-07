@@ -8,10 +8,10 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: b2fa280d-894c-47da-bbf5-8b4d0c6b6165
-source-git-commit: d462ccf41fa5483cfa02f5eaf154c23f26157a1e
+source-git-commit: 27610773d47a947dbfa1deb3f594667406a9aefb
 workflow-type: tm+mt
-source-wordcount: '75'
-ht-degree: 1%
+source-wordcount: '127'
+ht-degree: 19%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 1%
   </td>
   <td>
     <a href="workday/tutorial-video.md">
-      <img alt="Adobe Signと[!DNL Workday]の統合" src="images/wd-integration.png"/>
+    <img alt="Adobe Signと[!DNL Workday]の統合" src="images/wd-integration.png"/>
     </a>
     <div>
     <a href="workday/tutorial-video.md"><strong>Adobe Signと[!DNL Workday]の統合</strong></a>
@@ -45,8 +45,13 @@ ht-degree: 1%
     <em>[!DNL Workday]内で動作し、すべてのドキュメントを管理するようにAdobe Signを構成する方法を説明します</em>
   </td>
   <td>
-    <img alt="スペーサ" src="images/whitespace.png"/>
+    <a href="https://community.adobe.com/t5/adobe-sign/bd-p/adobe-sign?page=1&amp;sort=latest_replies&amp;filter=all">
+    <img alt="Adobe Sign Supportコミュニティ" src="images/sign-forum.png"/>
+    </a>
     <div>
+    <a href="https://community.adobe.com/t5/adobe-sign/bd-p/adobe-sign?page=1&amp;sort=latest_replies&amp;filter=all"><strong>Adobe Sign Supportコミュニティ</strong></a>
+    </div>
+    <em>質問、フィードバックとヒントの共有、Sign Integration製品とサービスに関する他のAdobe Signユーザーや愛好者との話し合いを行います。</em>
     <br>
   </td>
 </tr>
