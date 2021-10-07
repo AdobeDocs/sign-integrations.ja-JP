@@ -7,9 +7,9 @@ type: Documentation
 solution: Adobe Sign
 role: User, Developer
 topic: Integrations
-source-git-commit: 27610773d47a947dbfa1deb3f594667406a9aefb
+source-git-commit: 40fe3649aab0499ce8e5fbd1b11308ffbd759a44
 workflow-type: tm+mt
-source-wordcount: '2336'
+source-wordcount: '2354'
 ht-degree: 2%
 
 ---
@@ -245,6 +245,10 @@ Quoteを表示する場合は、「**[!UICONTROL Create EchoSign Agreement]**」
 [!DNL EchoSign]契約の[!UICONTROL イベント]サブパネルは、署名のために送信される契約の状態を追跡します。 [!DNL EchoSign]契約の最新の更新情報を表示するには、[**[!UICONTROL 更新状況]**]を選択します。 [[!UICONTROL 更新状態]]ボタンは、契約が署名用に送信された後にのみ使用できます。
 
 ![画像](images/update-cancel-status.png)
+
+契約が署名用に送信された後、「**[!UICONTROL ステータスの更新]**」を選択して最新のステータスを取得します。
+
+![画像](images/events-subpanel.png)
 
 ### アラームの送信 {#send-reminders}
 
