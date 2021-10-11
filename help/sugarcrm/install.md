@@ -7,7 +7,8 @@ type: Documentation
 solution: Adobe Sign
 role: User, Developer
 topic: Integrations
-source-git-commit: 40fe3649aab0499ce8e5fbd1b11308ffbd759a44
+exl-id: 0512f616-568a-4b96-9bd1-48e67bc3536b
+source-git-commit: 54216c4fc9442b6291e6b253fa619a1b62a0f40b
 workflow-type: tm+mt
 source-wordcount: '2354'
 ht-degree: 2%
@@ -15,7 +16,7 @@ ht-degree: 2%
 ---
 
 
-# [!DNL SugarCRM]  インストールガイド {#sugarcrm-install-guide}
+# [!DNL SugarCRM] インストールガイド {#sugarcrm-install-guide}
 
 [カスタマーケアに問い合わせる](https://adobe.com/go/adobesign-support-center)
 
