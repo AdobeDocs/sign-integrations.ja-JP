@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: d8071d9aa23351e31a9360d3c4d17f6297d0e2f1
+source-git-commit: 45bc2d698396bb07c4a246930d34b7e2ad0f6648
 workflow-type: tm+mt
-source-wordcount: '3115'
+source-wordcount: '3113'
 ht-degree: 2%
 
 ---
@@ -57,7 +57,7 @@ Adobe Signとの統合用に[!DNL Veeva Vault]を設定するには、Vaultで�
 | フィールド | ラベル | タイプ | 説明 |
 | --- | --- | ---| --- | 
 | 外部ID__c | 契約書 ID | 文字列(100) | Adobe Signの一意の契約IDを保持します |
-| file_hash__c | ファイルハッシュ | 文字列(50) | Adobe Signに送信されたファイルのmd5 cksumを保持します |
+| file_hash__c | ファイルハッシュ | 文字列(50) | Adobe Signに送信されたファイルのmd5チェックサムを保持します |
 | name__v | 名前 | 文字列(128) | 契約名を保持します |
 | 送信者_c | 送信者 | オブジェクト（ユーザー） | 免除承諾を作成したVaultユーザへの参照を保持します。 |
 | signature_status__c | 署名の状態 | 文字列(75) | Adobe Signで契約のステータスを保持 |
@@ -223,7 +223,7 @@ VaultドキュメントをAdobe Signに送信する場合、その状態は免�
 
    ![ライフサイクル状態1のイメージ](images/lifecycle-state1.png)
 
-* **Adobe Sign Draftで**:これは、ドキュメントが既にAdobe Signにアップロードされ、契約がDRAFT状態であることを示す状態のプレースホルダ名です。必須の状態です。 この状態は、次の5つのユーザー操作に従って定義する必要があります。
+* **Adobe Sign Draftで**:これは、ドキュメントが既にAdobe Signにアップロードされ、契約がDRAFT状態であることを示す状態のプレースホルダ名です。必須の状態です。 この状態では、次の5つのユーザーアクションを定義する必要があります。
 
    * ドキュメントの状態を&#x200B;*Adobe署名の作成*&#x200B;の状態に変更するアクションです。 このユーザーアクションの名前は、ライフサイクルのすべてのドキュメントタイプで同じにする必要があります。 必要に応じて、このアクションの条件を「Adobe Signユーザーアクションを許可」に設定できます。
    * ドキュメントの状態を&#x200B;*Adobe署名状態*&#x200B;に変更するアクションです。 このユーザーアクションの名前は、ライフサイクルのすべてのドキュメントタイプで同じにする必要があります。 必要に応じて、このアクションの条件を「Adobe Signユーザーアクションを許可」に設定できます。
