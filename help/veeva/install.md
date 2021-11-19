@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 7ded835b48519cba656f160e691c697c91e2c8d0
+source-git-commit: aef70e46f24bb019b07092d84d69519fe16846e4
 workflow-type: tm+mt
-source-wordcount: '3131'
+source-wordcount: '3163'
 ht-degree: 2%
 
 ---
@@ -182,9 +182,13 @@ Adobe Signと Vault の統合では、次の 2 つの Web アクションを作�
 
    種類：文書のターゲット：Vault URL 内に表示： <https://api.na1.adobesign.com/api/gateway/veevavaultintsvc/partner/agreement?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultid=${Vault.id}&useWaitPage=true>
 
+   ![Adobe Sign作成の画像](images/create-adobe-sign.png)
+
 * **Adobe Sign**:Adobe Signの既存の契約書をキャンセルし、文書の状態を最初の状態に戻します。
 
    種類：文書のターゲット：Vault URL 内に表示：: <https://api.na1.adobesign.com/api/gateway/veevavaultintsvc/partner/agreement/cancel?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultid=${Vault.id}&useWaitPage=true>
+
+   ![キャンセルAdobe Signの画像](images/cancel-adobe-sign.png)
 
 ## ドキュメントライフサイクルの更新 {#document-lifecycle}
 
@@ -192,12 +196,16 @@ Adobe Signと Vault の統合では、次の 2 つの Web アクションを作�
 
 ### ライフサイクルロール {#lifecycle-role}
 
-アプリケーション署名の対象となる文書で使用されるすべてのライフサイクルに、Adobe Sign管理者アプリケーションのロールを追加するAdobeが必要です。 この役割は、次のオプションを使用して作成する必要があります。
-
-* 動的アクセス制御を有効にする
-* ドキュメントタイプグループのみを含むドキュメント共有ルール
+Adobe Sign管理者アプリケーションロールは、以下に示すように、アプリケーション署名の対象となる文書で使用されるすべてのAdobeに追加する必要があります。
 
 ![ライフサイクル管理ロールのイメージ](images/document-lifecycle-admin-role.png)
+
+管理者ロールは、次のオプションを使用して作成する必要があります。
+
+* 動的アクセス制御を有効にした。
+* 以下の画像に示すように、ドキュメントタイプグループのみを含むドキュメント共有ルール。
+
+![Adobe Sign 共有ルールの画像](images/adobe-sign-sharing-rule.png)
 
 ### ライフサイクル状態 {#lifecycle-states}
 
@@ -263,7 +271,9 @@ Vault ドキュメントをAdobe Signに送信する場合、その状態は契�
 
 ![ドキュメントタイプの画像](images/document-type.png)
 
-![ドキュメントタイプの画像](images/document-edit-details.png)
+![ドキュメント編集の詳細の画像](images/document-edit-details.png)
+
+![ドキュメントタイプグループの画像](images/document-type-groups.png)
 
 ### ユーザーロール設定の作成 {#create-user-role-setup}
 
