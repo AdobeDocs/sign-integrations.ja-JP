@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 722f39a7220d72fde19ebb1058c8c2e8dea06b46
+source-git-commit: f647d0573f3e44f5a7e7997a309a8d18886959be
 workflow-type: tm+mt
-source-wordcount: '3401'
+source-wordcount: '3317'
 ht-degree: 2%
 
 ---
@@ -43,41 +43,13 @@ ht-degree: 2%
 
 設定するには [!DNL Veeva Vault] Adobe Signと統合するには、次の手順を実装する必要があります。
 
-**手順 1.** 「Adobe Sign Admin Group」という新しいグループを作成します。
-
-**手順 2.** [パッケージのデプロイ](https://helpx.adobe.com/content/dam/help/en/PKG-AdobeSign-Integration.zip)を選択します。
-
-**手順 3.** セキュリティプロファイルの作成
-
-**手順 4.** ユーザーを作成
-
-**手順 5.** ドキュメントタイプグループの設定
-
-**手順 6.** ユーザーロール設定の作成
-
-**手順 7.** 文書フィールドの設定
-
-**手順 8.** 文書レンディションの宣言
-
-**手順 9.** Web アクションの更新
-
-**手順 10.** ドキュメントライフサイクルの更新
-
-**手順 11.** ライフサイクル段階グループの一般ライフサイクルにAdobe Sign段階を追加
-
-**手順 12.** ライフサイクル状態のユーザーロールの権限を設定します
-
-**手順 13.** ドキュメントの状態とユーザーの役割に基づいてアトミックなセキュリティを設定する
-
-**手順 14.** Adobe Sign Cancel の文書メッセージを作成
-
-### 1.グループの作成 {#create-group}
+### 手順 1. グループの作成 {#create-group}
 
 Adobe Signを [!DNL Vault]という新しいグループが *Adobe Sign Admin Group* が作成されます。 このグループは、Adobe Sign関連フィールドの文書フィールドレベルのセキュリティを設定するために使用され、以下を含める必要があります *Adobe Sign統合プロファイル* デフォルトです。
 
 ![署名イベントの詳細の画像](images/create-admin-group.png)
 
-### 2.パッケージをデプロイする {#deploy-package}
+### 手順 2. パッケージのデプロイ {#deploy-package}
 
 [パッケージのデプロイ](https://helpx.adobe.com/content/dam/help/en/PKG-AdobeSign-Integration.zip) の手順に従います。 デプロイされると、パッケージは次のものを作成します。
 
@@ -166,7 +138,7 @@ Process Locker オブジェクトが作成され、Adobe Sign統合プロセス�
 
 ![アプリケーションロール作成のイメージ](images/create-application-roles.png)
 
-### 3.セキュリティプロファイルの設定 {#security-profiles}
+### 手順 3. セキュリティプロファイルの設定 {#security-profiles}
 
 Vault を正常に統合するには、 *Adobe Sign統合プロファイル* が作成され、その権限が *Adobe Sign Admin Actions*&#x200B;を選択します。 Adobe Sign統合プロファイルは、システムアカウントに割り当てられ、Vault API を呼び出すときに統合によって使用されます。 このプロファイルは、次の権限を許可します。
 
@@ -179,7 +151,7 @@ Vault 内のAdobe Sign履歴へのアクセスを必要とするユーザのセ�
 
 ![署名イベントの詳細の画像](images/set-permissions.png)
 
-## 4.ユーザーの作成 {#create-user}
+### 手順 4. ユーザーを作成 {#create-user}
 
 Adobe Sign統合の Vault システムアカウントユーザは、次のことを行う必要があります。
 
@@ -198,7 +170,7 @@ Adobe Sign統合の Vault システムアカウントユーザは、次のこと
 
    ![署名イベントの詳細の画像](images/add-user.png)
 
-### 5.文書型グループを作成 {#create-document-type-group}
+### 手順 5. ドキュメントタイプグループの設定 {#create-document-type-group}
 
 Adobe Signパッケージをデプロイすると、「Adobe Sign Document」という名前のドキュメントタイプグループレコードが作成されます。
 
@@ -212,13 +184,13 @@ Adobe Signプロセスの対象となるすべての文書分類に対して、�
 
 **注意：** ユーザーロール設定オブジェクトに、ドキュメントタイプグループオブジェクトを参照するフィールドが含まれていない場合は、フィールドを追加する必要があります。
 
-### 6.ユーザーロールのセットアップの作成 {#create-user-role-setup}
+### 手順 6. ユーザーロール設定の作成 {#create-user-role-setup}
 
 ライフサイクルが適切に設定されたら、Adobe Signプロセスの対象となるすべての文書に対して、Adobe Sign Admin ユーザーが DAC によって追加されるようにします。 これを行うには、次を指定する適切なユーザーロール設定レコードを作成します。
 
-* 「Adobe Sign Document」としてのドキュメントタイプグループ、
-* 「Adobe Sign管理者ロール」としてのアプリケーションロール
-* 統合ユーザー。
+* 文書タイプグループをAdobe Sign Document に設定
+* アプリケーションロール (Adobe Sign管理者ロール )
+* 統合ユーザー
 
 ![ユーザーロール設定のイメージ](images/user-role-setup.png)
 
@@ -226,7 +198,7 @@ Adobe Signプロセスの対象となるすべての文書分類に対して、�
 
 ![ユーザーロール設定のイメージ](images/create-setup-field.png)
 
-### 7.文書フィールドの設定 {#create-fields}
+### 手順 7. 文書フィールドの設定 {#create-fields}
 
 Adobe Signとの統合を確立するには、次の 2 つの新しい共有ドキュメントフィールドが必要です。
 
@@ -257,7 +229,7 @@ Adobe Signとの統合を確立するには、次の 2 つの新しい共有ド�
 
    ![Adobe Sign ユーザーアクションを許可の画像](images/allow-adobe-sign-user-actions.png)
 
-### 8.文書レンディションの宣言 {#declare-renditions}
+### 手順 8. 文書のレンディションを宣言 {#declare-renditions}
 
 *Adobe Sign Rendition(adobe_sign_rendition__c) という新しいレンディションの種類は、Vault 統合で署名済みPDFドキュメントをAdobe Signにアップロードするために使用されます。 Adobe Signレンディションは、Adobe署名の対象となる文書型ごとに宣言する必要があります。
 
@@ -265,7 +237,7 @@ Adobe Signとの統合を確立するには、次の 2 つの新しい共有ド�
 
 ![レンディションの種類の画像](images/edit-details-clinical-type.png)
 
-### 9. Web アクションの更新 {#web-actions}
+### 手順 9. Web アクションの更新 {#web-actions}
 
 Adobe Signと Vault の統合では、次の 2 つの Web アクションを作成および設定する必要があります。
 
@@ -281,7 +253,7 @@ Adobe Signと Vault の統合では、次の 2 つの Web アクションを作�
 
    ![キャンセルAdobe Signの画像](images/cancel-adobe-sign.png)
 
-### 10.文書ライフサイクルの更新 {#document-lifecycle}
+### 手順 10. ドキュメントライフサイクルの更新 {#document-lifecycle}
 
 ライフサイクル署名の対象となる各文書タイプについて、対応する文書Adobeを、新しいライフサイクルの役割および状態を追加して更新する必要があります。
 
@@ -365,21 +337,21 @@ Adobe Sign契約書のライフサイクルには、次の状態があります�
 
 ![Adobe Sign Vault マッピングのイメージ](images/sign-vault-mappings.png)
 
-### 11.ライフサイクル段階グループの一般ライフサイクルにAdobe Sign段階を追加する
+### 手順 11. ライフサイクル段階グループの一般ライフサイクルにAdobe Sign段階を追加
 
 ![Adobe Sign Vault マッピングのイメージ](images/add-adobe-sign-stage.png)
 
-### 12.ライフサイクル状態のユーザーロールのアクセス許可を設定する
+### 手順 12. ライフサイクル状態のユーザーロールの権限を設定します
 
 ライフサイクル状態の各ユーザーロールに適切な権限を設定する必要があります（以下の図を参照）。
 
 ![Adobe Sign Vault マッピングのイメージ](images/set-user-role-permissions.png)
 
-### 13.ドキュメントの状態とユーザーの役割に基づいてアトミックなセキュリティを設定する
+### 手順 13. ドキュメントの状態とユーザーの役割に基づいてアトミックなセキュリティを設定する
 
 ![Adobe Sign Vault マッピングのイメージ](images/set-atomic-security.png)
 
-### 14. Adobe Sign Cancel の文書メッセージを作成します。
+### 手順 14. Adobe Sign Cancel の文書メッセージを作成
 
 ![Adobe Sign Vault マッピングのイメージ](images/create-cancel-message.png)
 
