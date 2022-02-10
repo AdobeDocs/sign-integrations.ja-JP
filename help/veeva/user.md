@@ -9,9 +9,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 39a43637-af3f-432e-a784-8f472aa86df5
-source-git-commit: e1394c24aebd1e026eb6c5a33935149f33ef8ea4
+source-git-commit: f460f23ac3e412b527a91668561fff48ac518941
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '667'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ Adobe Signと [!DNL Veeva Vault] では、法的な署名や監査可能な文�
 
 Adobe Signと [!DNL Veeva Vault] 文書と署名のワークフローを効率化し、迅速化します。 統合ワークフローを使用すると、次のことができます。
 
-* カタツムリによるメールや夜間の通話、ファックスなどに費やす時間とリソースを節約できます。
+* カタツムリのメールや夜間の通話、ファックスなどに費やす時間とリソースを節約できます。
 * 電子サインまたは承認用に [!DNL Veeva Vault]リアルタイムの契約履歴にアクセスし、保存された契約を表示できます。
 * 組織全体にわたる詳細をリアルタイムでトラックできます。また、契約書が表示、署名、キャンセル、拒否されたときに最新情報を受け取ることができます。
 * 電子サインは 20 以上の言語に対応しており、Fax 返信サービスは世界中の 50 以上のロケールでサポートされています。
