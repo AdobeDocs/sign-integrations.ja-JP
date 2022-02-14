@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: c3ad36ec887230d746d8d2084127155615f1d0b9
+source-git-commit: db0d9022e520e9db39254e78b66aab8b913f353a
 workflow-type: tm+mt
-source-wordcount: '3145'
+source-wordcount: '3169'
 ht-degree: 3%
 
 ---
@@ -34,6 +34,7 @@ ht-degree: 3%
 * 文書フィールドとレンディションを作成します。
 * Web アクションを設定し、ドキュメントライフサイクルを更新します。
 * ドキュメントタイプのユーザーおよびユーザーロールの設定を作成します。
+* ミドルウェアを使用して Veeva Vault をAdobe Signに接続します。
 
 >[!NOTE]
 >
@@ -233,13 +234,13 @@ Adobe Signと Vault の統合では、次の 2 つの Web アクションを作�
 
 * **Adobe Sign**:Adobe Sign Agreement が作成または表示されます。
 
-   種類：文書のターゲット：Vault URL 内に表示： <https://api.na1.adobesign.com/api/gateway/veevavaultintsvc/partner/agreement?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultid=${Vault.id}&useWaitPage=true>
+   種類：文書のターゲット：Vault 資格情報に表示：メッセージ投稿 URL を使用してセッション投稿の資格情報を有効にする： <https://api.na1.adobesign.com/api/gateway/veevavaultintsvc/partner/agreement?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultid=${Vault.id}&useWaitPage=true>
 
    ![Adobe Sign作成の画像](images/create-adobe-sign.png)
 
 * **Adobe Sign**:Adobe Signの既存の契約書をキャンセルし、文書の状態を最初の状態に戻します。
 
-   種類：文書のターゲット：Vault URL 内に表示：: <https://api.na1.adobesign.com/api/gateway/veevavaultintsvc/partner/agreement/cancel?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultid=${Vault.id}&useWaitPage=true>
+   種類：文書のターゲット：Vault 資格情報に表示：メッセージ投稿 URL を使用してセッション投稿の資格情報を有効にする：: <https://api.na1.adobesign.com/api/gateway/veevavaultintsvc/partner/agreement/cancel?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultid=${Vault.id}&useWaitPage=true>
 
    ![キャンセルAdobe Signの画像](images/cancel-adobe-sign.png)
 
