@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: db0d9022e520e9db39254e78b66aab8b913f353a
+source-git-commit: 535c4510e876c708679d7f6a800206264a9876e2
 workflow-type: tm+mt
-source-wordcount: '3169'
+source-wordcount: '3428'
 ht-degree: 3%
 
 ---
@@ -125,13 +125,51 @@ Adobe Signを [!DNL Vault]という新しいグループが *Adobe Sign Admin Gr
 | participant_role__c | 参加者の役割 | 文字列 | Adobe Sign参加者のロールを保持します |
 | signature__c | 署名 | オブジェクト（署名） | 署名の親レコードへの参照を保持します |
 
-![署名イベントの詳細の画像](images/signature-event-object-details.png)
+![画像](images/signature-event-object-details.png)
 
 #### Process Locker オブジェクト {#process-locker}
 
 Process Locker オブジェクトが作成され、Adobe Sign統合プロセスがロックされます。 カスタムフィールドは必要ありません。
 
 ![署名イベントの詳細の画像](images/process-locker-details.png)
+
+展開パッケージの一部として含まれる Signature、Signatory、Signature Event、および Process Locker の各オブジェクトでは、[ このオブジェクトのデータ変更を監査する ] プロパティが既定で有効になっています。
+
+**注意：** Vault キャプチャオブジェクトレコードのデータ変更を監査ログに含めるには、[ データ変更の監査 ] 設定を有効にします。 この設定はデフォルトでオフになっています。 この設定を有効にしてレコードを作成すると、この設定を無効にすることはできません。 この設定がオフで、レコードが存在する場合は、Vault の所有者のみが設定を更新できます。
+
+#### **署名オブジェクトの参加者と履歴を表示** {#display-participants-history}
+
+デプロイメントパッケージの一部として提供される Signature オブジェクトは、 [署名詳細ページレイアウト](https://vvtechpartner-adobe-rim.veevavault.com/ui/#admin/content_setup/object_schema/pagelayout?t=signature__c&amp;d=signature_detail_page_layout__c)を選択します。 ページレイアウトには、参加者と履歴のセクションがあります。
+
+* この *参加者* セクションには、次の図に示すように構成された「関連オブジェクト」セクションがあります。
+
+   ![画像](images/edit-related-objects.png)
+
+* 以下に示すように、参加者に表示される列を編集できます。
+
+   ![画像](images/set-columns-to-display.png)
+
+* この *履歴* セクションには、次の図に示すように構成された「関連オブジェクト」セクションがあります。
+
+   ![画像](images/edit-related-object-in-history.png)
+
+* 以下に示すように、履歴に表示される列を編集できます。
+
+   ![画像](images/select-columns-to-display.png)
+
+#### **Adobe Sign Document の参加者と監査履歴の表示** {#view-participants-audit-history}
+
+* Adobe Sign文書の参加者と監査履歴を表示するには、文書の「Adobe署名」セクションのリンクを選択します。
+
+   ![画像](images/view-participants-audit-history.png)
+
+* 開いたページに、Adobe Signドキュメントの参加者と履歴が表示されます（以下を参照）。
+
+   ![画像](images/participants-and-history.png)
+
+* 以下に示すように、署名の監査証跡を表示します。
+
+   ![画像](images/audit-trail.png)
 
 ### 手順 3. セキュリティプロファイルの設定 {#security-profiles}
 
