@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 535c4510e876c708679d7f6a800206264a9876e2
+source-git-commit: 928bbadab28f041de2d8bc17ad8383f61033a6c0
 workflow-type: tm+mt
-source-wordcount: '3428'
+source-wordcount: '3431'
 ht-degree: 3%
 
 ---
@@ -135,7 +135,7 @@ Process Locker オブジェクトが作成され、Adobe Sign統合プロセス�
 
 展開パッケージの一部として含まれる Signature、Signatory、Signature Event、および Process Locker の各オブジェクトでは、[ このオブジェクトのデータ変更を監査する ] プロパティが既定で有効になっています。
 
-**注意：** Vault キャプチャオブジェクトレコードのデータ変更を監査ログに含めるには、[ データ変更の監査 ] 設定を有効にします。 この設定はデフォルトでオフになっています。 この設定を有効にしてレコードを作成すると、この設定を無効にすることはできません。 この設定がオフで、レコードが存在する場合は、Vault の所有者のみが設定を更新できます。
+**注意：** [ データ変更の監査 ] 設定を有効にすると、Vault キャプチャオブジェクトで監査ログにデータ変更を記録できます。 この設定はデフォルトでオフになっています。 この設定を有効にしてレコードを作成すると、レコードを無効にできなくなります。 この設定がオフで、レコードが存在する場合は、Vault の所有者のみが設定を更新できます。
 
 #### **署名オブジェクトの参加者と履歴を表示** {#display-participants-history}
 
@@ -167,7 +167,7 @@ Process Locker オブジェクトが作成され、Adobe Sign統合プロセス�
 
    ![画像](images/participants-and-history.png)
 
-* 以下に示すように、署名の監査証跡を表示します。
+* 以下のように、署名の監査証跡を表示します。
 
    ![画像](images/audit-trail.png)
 
