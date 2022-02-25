@@ -1,5 +1,5 @@
 ---
-title: '[!DNL Veeva Vault] インストールガイド'
+title: '"[!DNL Veeva Vault] インストールガイド"'
 description: Adobe Signと Veeva の統合を可能にするインストールガイド
 product: Adobe Sign
 topic-tags: EchoSign/Integrations
@@ -10,7 +10,7 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 928bbadab28f041de2d8bc17ad8383f61033a6c0
+source-git-commit: 04a3e58da81c1a034318807776077d0076eec85f
 workflow-type: tm+mt
 source-wordcount: '3431'
 ht-degree: 3%
@@ -56,8 +56,8 @@ Adobe Signを [!DNL Vault]という新しいグループが *Adobe Sign Admin Gr
 
 * カスタムオブジェクト：Signature オブジェクト、Signatory オブジェクト、Signature Event オブジェクト、Process Locker オブジェクト
 * 署名オブジェクトのページレイアウト
-* 署名イベントオブジェクトのページレイアウト
-* 署名者オブジェクトページレイアウト
+* Signature Event object page layout
+* Signatory object page layout
 * Process Locker オブジェクトページレイアウト
 * Adobe Sign Rendition type
 * 共有フィールドの signature__c 、 allow_adobe_sign_user_actions__c
@@ -243,7 +243,7 @@ Adobe Signプロセスの対象となるすべての文書分類に対して、�
 
    ![画像](images/create-display-section.png)
 
-1. 2 つの共有文書フィールド (signature__c および allow_adobe_sign_user_actions__c) の UI セクションを **[!UICONTROL Adobe署名]** をセクションラベルとして使用します。
+1. For the two shared Document fields (signature__c and allow_adobe_sign_user_actions__c), update the UI section with **[!UICONTROL Adobe Signature]** as the section label.
 1. Adobe署名の対象となるすべての文書タイプに、3 つの共有フィールドを追加します。 これを行うには、ベースドキュメントページで、「 **[!UICONTROL 追加]** > **[!UICONTROL 既存の共有フィールド]** を選択します。
 
    ![画像](images/create-document-fields.png)
@@ -252,11 +252,11 @@ Adobe Signプロセスの対象となるすべての文書分類に対して、�
 
    ![画像](images/use-shared-fields.png)
 
-1. 両方のフィールドには、Adobe Sign Admin Group のメンバーのみが値を更新できる特定のセキュリティが必要です。
+1. Note that both fields must have a specific security that allows only members of Adobe Sign Admin Group to update their values.
 
    ![画像](images/security-overrides.png)
 
-[ ボールトオーバーレイを無効にする ](disable_vault_overlays__v) は、既存の共有フィールドです。 必要に応じて、Adobe Sign Admin グループのメンバーのみが値を更新できる特定のセキュリティをフィールドに設定できます。
+[ ボールトオーバーレイを無効にする ](disable_vault_overlays__v) は、既存の共有フィールドです。 Optionally, the field can have a specific security that allows only members of Adobe Sign Admin group to update its value.
 
 ### 手順 8. 文書のレンディションを宣言 {#declare-renditions}
 
@@ -335,15 +335,15 @@ Adobe Sign契約書のライフサイクルには、次の状態があります�
 
    * **Adobe Sign Draft**:これは、ドキュメントが既にAdobe Signにアップロードされ、その契約書がドラフト状態であることを示す、状態のプレースホルダー名です。 必須状態です。 この状態では、次の 5 つのユーザーアクションを定義する必要があります。
 
-      * ドキュメントの状態を *Adobe Sign Authoring* を選択します。 このユーザアクションの名前は、すべてのライフサイクルのすべてのドキュメントタイプで同じである必要があります。 必要に応じて、このアクションの条件を「Adobe Signユーザーアクションを許可する」が「はい」に設定できます。
+      * Action that changes the state of document to *In Adobe Sign Authoring* state. このユーザアクションの名前は、すべてのライフサイクルのすべてのドキュメントタイプで同じである必要があります。 If necessary, the criteria for this action can be set to “Allow Adobe Sign user actions equals Yes”.
       * ドキュメントの状態を *署名Adobe状態*&#x200B;を選択します。 このユーザアクションの名前は、すべてのライフサイクルのすべてのドキュメントタイプで同じである必要があります。 必要に応じて、このアクションの条件を「Adobe Signユーザーアクションを許可する」が「はい」に設定できます。
       * ドキュメントの状態を *Adobe Sign Cancelled* を選択します。 このユーザアクションの名前は、すべてのライフサイクルのすべてのドキュメントタイプで同じである必要があります。 必要に応じて、このアクションの条件を「Adobe Signユーザーアクションを許可する」が「はい」に設定できます。
       * Web アクション「Adobe Sign」を呼び出すアクション。
-      * Web アクション「Adobe Signをキャンセル」を呼び出すアクション。 この状態には、Adobe Sign 管理者ロールが次の操作を実行できるセキュリティが必要です。ドキュメントの表示、コンテンツの表示、フィールドの編集、関係の編集、ソースのダウンロード、表示可能なレンディションの管理、状態の変更を行います。
+      * Action that calls the Web Action ‘Cancel Adobe Sign’. This state must have security that allowsAdobe Sign Admin role to: view document, view content, edit fields, edit relationships, download source, manage viewable rendition, and change state.
 
       ![ライフサイクルステータス 2 のイメージ](images/lifecycle-state2.png)
 
-   * **Adobe Sign Authoring**:これは、文書が既にAdobe Signにアップロードされており、その契約書の状態が AUTHORING または DOCUMENTS_NOT_YET_PROCESSED であることを示す、ステートのプレースホルダー名です。 必須状態です。 この状態には、次の 4 つのユーザーアクションを定義する必要があります。
+   * **In Adobe Sign Authoring**: This is a placeholder name for state that indicates that the document is already uploaded to Adobe Sign and that its agreement is in AUTHORING or DOCUMENTS_NOT_YET_PROCESSED state. 必須状態です。 この状態には、次の 4 つのユーザーアクションを定義する必要があります。
 
       * ドキュメントの状態を「Adobe Sign Cancelled」状態に変更するアクション。 このユーザーアクションの名前は、ライフサイクルに関係なくすべてのドキュメントタイプで同じである必要があります。 必要に応じて、このアクションの条件を「Adobe Signユーザーアクションを許可する」が「はい」に設定できます。
       * ドキュメントの状態を「署名中」状態に変更するAdobeです。 このユーザーアクションの名前は、ライフサイクルに関係なくすべてのドキュメントタイプで同じである必要があります。 必要に応じて、このアクションの条件を「Adobe Signユーザーアクションを許可する」が「はい」に設定できます。
@@ -413,7 +413,7 @@ Adobe Signアカウント管理者が接続するには、次の手順に従う�
 
    ![画像](images/middleware_newconnection.png)
 
-1. 選択 **[!UICONTROL 接続の追加]** をクリックして、新しい接続を追加します。
+1. Select **[!UICONTROL Add Connection]** to add a new connection.
 
 1. 表示された接続を追加ダイアログで、必要な詳細情報 ( [!DNL Veeva Vault] 資格情報。
 
