@@ -1,5 +1,5 @@
 ---
-title: '"[!DNL Veeva Vault] インストールガイド"'
+title: Veeva Vault インストールガイド
 description: Adobe Signと Veeva の統合を可能にするインストールガイド
 product: Adobe Sign
 topic-tags: EchoSign/Integrations
@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: ad78f32d6c418ac9c7120899831b74bec9d5620d
+source-git-commit: 23263a9dab4c74fd7fed05ed5a36bede67feaaf8
 workflow-type: tm+mt
-source-wordcount: '3503'
+source-wordcount: '3501'
 ht-degree: 3%
 
 ---
