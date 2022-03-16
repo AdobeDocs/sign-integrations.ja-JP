@@ -10,16 +10,16 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 04a3e58da81c1a034318807776077d0076eec85f
+source-git-commit: ad78f32d6c418ac9c7120899831b74bec9d5620d
 workflow-type: tm+mt
-source-wordcount: '3431'
+source-wordcount: '3503'
 ht-degree: 3%
 
 ---
 
 # [!DNL Veeva Vault] インストールガイド{#veeva-installation-guide}
 
-[**Adobe Sign サポートへのお問い合わせ**](https://adobe.com/go/adobesign-support-center)
+[**Adobe Sign サポートへのお問い合わせ**](https://adobe.com/go/adobesign-support-center_jp)
 
 ## 概要 {#overview}
 
@@ -56,10 +56,11 @@ Adobe Signを [!DNL Vault]という新しいグループが *Adobe Sign Admin Gr
 
 * カスタムオブジェクト：Signature オブジェクト、Signatory オブジェクト、Signature Event オブジェクト、Process Locker オブジェクト
 * 署名オブジェクトのページレイアウト
-* Signature Event object page layout
-* Signatory object page layout
+* 署名イベントオブジェクトのページレイアウト
+* 署名者オブジェクトページレイアウト
 * Process Locker オブジェクトページレイアウト
 * Adobe Sign Rendition type
+* 元のレンディションの種類
 * 共有フィールドの signature__c 、 allow_adobe_sign_user_actions__c
 * Adobe Sign Web Action
 * Adobe Sign Web アクションのキャンセル
@@ -243,7 +244,7 @@ Adobe Signプロセスの対象となるすべての文書分類に対して、�
 
    ![画像](images/create-display-section.png)
 
-1. For the two shared Document fields (signature__c and allow_adobe_sign_user_actions__c), update the UI section with **[!UICONTROL Adobe Signature]** as the section label.
+1. 2 つの共有文書フィールド (signature__c および allow_adobe_sign_user_actions__c) の UI セクションを **[!UICONTROL Adobe署名]** をセクションラベルとして使用します。
 1. Adobe署名の対象となるすべての文書タイプに、3 つの共有フィールドを追加します。 これを行うには、ベースドキュメントページで、「 **[!UICONTROL 追加]** > **[!UICONTROL 既存の共有フィールド]** を選択します。
 
    ![画像](images/create-document-fields.png)
@@ -252,11 +253,11 @@ Adobe Signプロセスの対象となるすべての文書分類に対して、�
 
    ![画像](images/use-shared-fields.png)
 
-1. Note that both fields must have a specific security that allows only members of Adobe Sign Admin Group to update their values.
+1. 両方のフィールドには、Adobe Sign Admin Group のメンバーのみが値を更新できる特定のセキュリティが必要です。
 
    ![画像](images/security-overrides.png)
 
-[ ボールトオーバーレイを無効にする ](disable_vault_overlays__v) は、既存の共有フィールドです。 Optionally, the field can have a specific security that allows only members of Adobe Sign Admin group to update its value.
+[ ボールトオーバーレイを無効にする ](disable_vault_overlays__v) は、既存の共有フィールドです。 必要に応じて、Adobe Sign Admin グループのメンバーのみが値を更新できる特定のセキュリティをフィールドに設定できます。
 
 ### 手順 8. 文書のレンディションを宣言 {#declare-renditions}
 
@@ -265,6 +266,10 @@ Adobe Signプロセスの対象となるすべての文書分類に対して、�
 ![レンディションの種類の画像](images/rendition-type.png)
 
 ![レンディションの種類の画像](images/edit-details-clinical-type.png)
+
+新しいレンディションのタイプは *元のレンディション (original_rendition__c)* は、Vault 統合によって、元の表示可能なレンディションの保存に使用するレンディションの名前として使用されます（署名済みの文書が表示可能レンディションとしてインポートされた場合）。
+
+![画像](images/original-rendition.png)
 
 ### 手順 9. Web アクションの更新 {#web-actions}
 
@@ -335,15 +340,15 @@ Adobe Sign契約書のライフサイクルには、次の状態があります�
 
    * **Adobe Sign Draft**:これは、ドキュメントが既にAdobe Signにアップロードされ、その契約書がドラフト状態であることを示す、状態のプレースホルダー名です。 必須状態です。 この状態では、次の 5 つのユーザーアクションを定義する必要があります。
 
-      * Action that changes the state of document to *In Adobe Sign Authoring* state. このユーザアクションの名前は、すべてのライフサイクルのすべてのドキュメントタイプで同じである必要があります。 If necessary, the criteria for this action can be set to “Allow Adobe Sign user actions equals Yes”.
+      * ドキュメントの状態を *Adobe Sign Authoring* を選択します。 このユーザアクションの名前は、すべてのライフサイクルのすべてのドキュメントタイプで同じである必要があります。 必要に応じて、このアクションの条件を「Adobe Signユーザーアクションを許可する」が「はい」に設定できます。
       * ドキュメントの状態を *署名Adobe状態*&#x200B;を選択します。 このユーザアクションの名前は、すべてのライフサイクルのすべてのドキュメントタイプで同じである必要があります。 必要に応じて、このアクションの条件を「Adobe Signユーザーアクションを許可する」が「はい」に設定できます。
       * ドキュメントの状態を *Adobe Sign Cancelled* を選択します。 このユーザアクションの名前は、すべてのライフサイクルのすべてのドキュメントタイプで同じである必要があります。 必要に応じて、このアクションの条件を「Adobe Signユーザーアクションを許可する」が「はい」に設定できます。
       * Web アクション「Adobe Sign」を呼び出すアクション。
-      * Action that calls the Web Action ‘Cancel Adobe Sign’. This state must have security that allowsAdobe Sign Admin role to: view document, view content, edit fields, edit relationships, download source, manage viewable rendition, and change state.
+      * Web アクション「Adobe Signをキャンセル」を呼び出すアクション。 この状態には、Adobe Sign 管理者ロールが次の操作を実行できるセキュリティが必要です。ドキュメントの表示、コンテンツの表示、フィールドの編集、関係の編集、ソースのダウンロード、表示可能なレンディションの管理、状態の変更を行います。
 
       ![ライフサイクルステータス 2 のイメージ](images/lifecycle-state2.png)
 
-   * **In Adobe Sign Authoring**: This is a placeholder name for state that indicates that the document is already uploaded to Adobe Sign and that its agreement is in AUTHORING or DOCUMENTS_NOT_YET_PROCESSED state. 必須状態です。 この状態には、次の 4 つのユーザーアクションを定義する必要があります。
+   * **Adobe Sign Authoring**:これは、文書が既にAdobe Signにアップロードされており、その契約書の状態が AUTHORING または DOCUMENTS_NOT_YET_PROCESSED であることを示す、ステートのプレースホルダー名です。 必須状態です。 この状態には、次の 4 つのユーザーアクションを定義する必要があります。
 
       * ドキュメントの状態を「Adobe Sign Cancelled」状態に変更するアクション。 このユーザーアクションの名前は、ライフサイクルに関係なくすべてのドキュメントタイプで同じである必要があります。 必要に応じて、このアクションの条件を「Adobe Signユーザーアクションを許可する」が「はい」に設定できます。
       * ドキュメントの状態を「署名中」状態に変更するAdobeです。 このユーザーアクションの名前は、ライフサイクルに関係なくすべてのドキュメントタイプで同じである必要があります。 必要に応じて、このアクションの条件を「Adobe Signユーザーアクションを許可する」が「はい」に設定できます。
@@ -413,7 +418,7 @@ Adobe Signアカウント管理者が接続するには、次の手順に従う�
 
    ![画像](images/middleware_newconnection.png)
 
-1. Select **[!UICONTROL Add Connection]** to add a new connection.
+1. 選択 **[!UICONTROL 接続の追加]** をクリックして、新しい接続を追加します。
 
 1. 表示された接続を追加ダイアログで、必要な詳細情報 ( [!DNL Veeva Vault] 資格情報。
 
@@ -440,6 +445,10 @@ Adobe Signアカウント管理者が接続するには、次の手順に従う�
    **注意：** 新しいAdobe Signユーザーの自動プロビジョニングは、有効に加えて、Adobe SignのAdobe Signアカウントレベルで有効になっている場合にのみ機能します **[!UICONTROL Sign ユーザーの自動プロビジョニング]** 」を[!DNL Veeva Vault]Adobe Signアカウント管理者が以下に示すように、Adobe Signとの統合。
 
    ![画像](images/allow-auto-provisioning.png)
+
+1. オリジナルのレンディションではなく Veeva に表示されるようにAdobe Sign Rendition を設定するには、チェックボックスをオンにします **[!UICONTROL Adobe Sign Rendition の表示]**&#x200B;を選択します。
+
+   ![画像](images/edit-connection-dispplay-adobe-sign-rendition.png)
 
 1. 選択 **[!UICONTROL 保存]** 」をクリックして新しい接続を保存します。
 
