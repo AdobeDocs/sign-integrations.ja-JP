@@ -5,11 +5,11 @@ products: Adobe Sign
 content-type: reference
 locnotes: All languages; screenshots to follow what's there already (seems there is a mix within a given language version of the article)
 type: Documentation
-solution: Adobe Sign
+solution: Acrobat Sign, Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 39a43637-af3f-432e-a784-8f472aa86df5
-source-git-commit: f460f23ac3e412b527a91668561fff48ac518941
+source-git-commit: b326a9afa2c16333d390cac3b30a2c7c741a4360
 workflow-type: tm+mt
 source-wordcount: '667'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 # Adobe Sign [!DNL Veeva Vault]:ユーザーガイド {#veeva-vault-user-guide}
 
-[**Adobe Sign サポートへのお問い合わせ**](https://adobe.com/go/adobesign-support-center)
+[**Adobe Sign サポートへのお問い合わせ**](https://adobe.com/go/adobesign-support-center_jp)
 
 この文書は、 [!DNL Veeva Vault] お客様がAdobe Sign [!DNL Veeva Vault] 統合をおこないます。
 

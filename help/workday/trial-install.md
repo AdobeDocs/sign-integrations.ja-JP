@@ -8,11 +8,11 @@ content-type: reference
 discoiquuid: 63ed2d5b-9d82-4f87-97e1-2dde23501e89
 locnotes: All languages; screenshots for Tier 1 and 2 only (see the currently published localized page for guidance)
 type: Documentation
-solution: Adobe Sign
+solution: Acrobat Sign, Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: beafe6c0-262f-4f5b-9315-a023a4eef4a2
-source-git-commit: c25be043b404e9bf7a90496d4e47c1f22069313d
+source-git-commit: b326a9afa2c16333d390cac3b30a2c7c741a4360
 workflow-type: tm+mt
 source-wordcount: '995'
 ht-degree: 31%
@@ -23,51 +23,51 @@ ht-degree: 31%
 
 ## 概要 {#overview}
 
-このドキュメントは、[!DNL Workday]様がAdobe Signで試用版アカウントをアクティブ化し、[!DNL Workday]テナントに統合する方法を学ぶのに役立つように設計されています。 [!DNL Workday]内でAdobe Signを使用するには、次のような[!DNL Workday]アイテムの作成と変更の方法を知っている必要があります。
+この文書は、 [!DNL Workday] お客様は、Adobe Signで体験版アカウントを有効化し、そのアカウントを [!DNL Workday] テナント Adobe Signを [!DNL Workday]を作成する方法と変更する方法を知っている必要があります [!DNL Workday] 項目：
 
 * ビジネスプロセスフレームワーク
-* テナントの設定と構成
-* レポート作成と[!DNL Workday] Studioの統合
+* テナントのセットアップと構成
+* レポートと [!DNL Workday] Studio との連携
 
-**注**:既存のAdobe Signアカウントを持っている場合は、試用版を開始する必要はありません。[!DNL Workday]の統合を要求するには、クライアント成功マネージャに問い合わせてください。
+**注意**:既存のAdobe Signアカウントがある場合は、体験版を開始する必要はありません。 お客様は、クライアントサクセスマネージャーに連絡して依頼することができます [!DNL Workday] 統合。
 
 次に、統合手順の概要を示します。
 
 * Adobe Sign で体験版アカウントを有効にします。
-* Adobe Signで統合キーを生成する
-* 統合キーを[!DNL Workday]テナントにインストールします
+* Adobe Signでの統合キーの生成
+* 統合キーを [!DNL Workday] テナント
 
-## Adobe Sign試用版アカウントを有効にする {#activate-sign-trial-account}
+## Adobe Sign体験版アカウントの有効化 {#activate-sign-trial-account}
 
-30日間のAdobe Signの試用版をリクエストするには、この[登録フォーム](https://land.echosign.com/esign-trial-workday-registration.html)に記入する必要があります。
+Adobe Signの 30 日間体験版をリクエストするには、こちらに入力する必要があります [登録フォーム](https://land.echosign.com/esign-trial-workday-registration.html)を選択します。
 
-**注**:試用版を作成する際には、有効な機能の電子メールアドレスを使用し、一時的な電子メールではなく使用することを強くお勧めします。アカウントを確認するには、この電子メールにアクセスする必要があります。そのため、アドレスは有効である必要があります。
+**注意**:体験版の作成には、一時的なメールアドレスではなく、有効な機能メールアドレスを使用することを強くお勧めします。 アカウントを確認するためにこの電子メールにアクセスする必要があるため、アドレスは有効である必要があります。
 
 ![体験版リクエストフォーム](images/trial-land.png)
 
-1営業日以内に、Adobe Signのオンボーディングスペシャリストが、[!DNL Workday]のアカウントを（Adobe Signで）準備します。 完了すると、次に示す確認の電子メールが届きます。
+Adobe Signのオンボーディングスペシャリストは、1 営業日以内に [!DNL Workday]を選択します。 完了すると、次のような確認メールが届きます。
 
 ![Adobe Sign からのようこそメール](images/welcome-email-2020.png)
 
-アカウントを初期化し、Adobe Sign [!UICONTROL ホーム]ページにアクセスするには、電子メールの指示に従ってください。
+アカウントを初期化してAdobe Signにアクセスするには [!UICONTROL ホーム] ページで、「電子メール」に記載されている手順に従います。
 
 ![Adobe Signダッシュボード](images/classic-home.png)
 
 ## 統合キーの生成 {#generate-an-integration-key}
 
-新規インストールの場合は、Adobe Signで統合キーを生成し、[!DNL Workday]に入力する必要があります。 このキーは、Adobe Sign環境と[!DNL Workday]環境を認証し、互いに信頼し合い、コンテンツを共有します。
+新規インストールの場合は、Adobe Signで統合キーを生成し、 [!DNL Workday]を選択します。 このキーは、Adobe Signと [!DNL Workday] お互いを信頼し合い、コンテンツを共有する環境
 
 Adobe Sign で統合キーを生成するには：
 
 1. Adobe Sign で管理者アカウントにログインします。。
-1. **[!UICONTROL **アカウント]** > **[!UICONTROL 個人設定]** **[!UICONTROL アクセストークン**]**&#x200B;に移動します。
-1. ウィンドウの右側にある&#x200B;**丸付きのプラスアイコン**&#x200B;をクリックします。
+1. 次の場所に移動 **[!UICONTROL **アカウント]** > **[!UICONTROL 個人環境設定]** > **[!UICONTROL アクセストークン**]**&#x200B;を選択します。
+1. ツールバーの「 **丸で囲まれたプラスアイコン** 窓の右側に
 
-   [!UICONTROL 統合キーの作成]インターフェイスが開きます。
+   パネルが開きます。 [!UICONTROL 統合キーの作成] します。
 
    ![「アクセストークン」ページへの移動のイメージ](images/navigate-to-group-accesstokens.png)
 
-1. [!DNL Workday]のように、キーの直感的な名前を指定します。
+1. キーにわかりやすい名前を指定します ( 例： [!DNL Workday]を選択します。
 
    統合キーでは、以下の要素を有効にする必要があります。
 
@@ -83,71 +83,71 @@ Adobe Sign で統合キーを生成するには：
 
    アカウントに指定されているキーを示す「[!UICONTROL アクセストークン]」ページが表示されます。
 
-1. [!DNL Workday]用に作成されたキー定義をクリックします。
+1. 作成されたキー定義をクリックします。 [!DNL Workday]を選択します。
 
-   [!UICONTROL Integration Key]リンクは、定義の最上部に表示されます。
+   この [!UICONTROL 統合キー] リンクが定義の上部に表示されます。
 
-1. **[!UICONTROL Integration Key]**&#x200B;リンクをクリックします。
+1. ツールバーの「 **[!UICONTROL 統合キー]** リンク、
 
-   統合キーを公開します。
+   統合キーが表示されます。
 
    ![「統合キー」リンク](images/integration-key.png)
 
-1. このキーをコピーし、次の手順で安全な場所に保存します。
-1. **[!UICONTROL OK]**&#x200B;をクリックします。
+1. このキーは、次の手順で使用するので、コピーして安全な場所に保存します。
+1. クリック **[!UICONTROL OK]**&#x200B;を選択します。
 
    ![統合キーパネル](images/copy-the-key-575.png)
 
-## [!DNL Workday]テナントの構成 {#configuring-the-workday-tenant}
+## 以下を設定します [!DNL Workday] テナント {#configuring-the-workday-tenant}
 
 ### 統合キーのインストール {#install-the-integration-key}
 
-[!DNL Workday]テナントに統合キーをインストールすると、Adobe Signとの信頼関係が確立されます。 この関係が確立されると、任意のビジネスプロセスに[!UICONTROL ドキュメントのレビュー手順]を追加し、署名プロセスを有効にできます。
+統合キーを [!DNL Workday] テナントはAdobe Signと信頼関係を確立します。 関係が確立されると、あらゆるビジネスプロセスに [!UICONTROL 「Review Document」ステップ] 署名プロセスを有効にするために追加されました。
 
 **注意**[!DNL Workday]：Adobe Sign は、 環境では「Adobe Document Cloud」というブランド名で呼ばれます。
 
 統合キーをインストールするには：
 
-1. [!DNL Workday]にアカウント管理者としてログインします。
-1. **[!UICONTROL [テナントの設定の編集 – ビジネスプロセス]**]ページを検索して開きます。
+1. ログイン先 [!DNL Workday] アカウント管理者
+1. ファイルを検索して **[!UICONTROL テナントのセットアップの編集 — ビジネスプロセス]** ページを開きます。
 
-1. 次の4つのフィールドに情報を入力します。
+1. 次の 4 つのフィールドに情報を入力します。
 
-   * **[!UICONTROL Adobe Document Cloudの確認]**:統合に関する固定テキスト確認。
+   * **[!UICONTROL Adobe Document Cloud Acknowledgment]**:統合に関する確認応答の固定テキスト。
 
-   * **[!UICONTROL Adobe Document Cloud APIキー]**:統合キーがインストールされている場所
+   * **[!UICONTROL Adobe Document Cloud API キー]**:統合キーのインストール先
 
-   * **[!UICONTROL Adobe Document Cloud Senderの電子メールアドレス]**:Adobe Signのグループレベル管理者の電子メールアドレス
+   * **[!UICONTROL Adobe Document Cloud Sender Email Address]**:Adobe Signのグループレベルの管理者の電子メールアドレス
 
-   * **[!UICONTROL ドキュメントが取り消されたときにeSignatureを待っているドキュメントを削除]**:でドキュメントが取り消された場合に、署名サイクルからドキュメントを削除するオプションの構 [!DNL Workday]成。
+   * **[!UICONTROL 文書のキャンセル時に電子サイン待ちの文書を削除]**:で文書がキャンセルされた場合に、署名サイクルから文書を削除するオプションの設定 [!DNL Workday]を選択します。
 
    ![Adobe Sign 統合キーのフィールド](images/bp-filled-torn2-575.png)
 
 1. 次に、インストールを完了します。
 
-   1. 統合キーを[!UICONTROL Adobe Sign API統合キー]フィールドに貼り付けます。
-   1. Adobe Sign管理者の電子メールアドレスを、「Adobe Document Cloud Sender E-mail Address」]フィールドに入力します。[!UICONTROL 
-   1. **[!UICONTROL OK]**&#x200B;をクリックします。
+   1. 統合キーを [!UICONTROL Adobe Sign API 統合キー] 」フィールドに入力します。
+   1. Adobe Sign管理者の電子メールアドレスを「 [!UICONTROL Adobe Document Cloud Sender Email Address] 」フィールドに入力します。
+   1. クリック **[!UICONTROL OK]**&#x200B;を選択します。
 
    ![統合キーのフィールドと、キー保有者の電子メールのフィールド](images/bp-filled-small.png)
 
-[!UICONTROL ドキュメントのレビュー手順]を追加し、**[!UICONTROL Adobe]**&#x200B;によるeSignをeSignatureの種類として使用するように設定することで、Adobe Sign機能を任意のビジネスプロセスに追加できるようになりました。
+Adobe Sign機能は、 [!UICONTROL 「Review Document」ステップ] を使用するように設定し、 **[!UICONTROL Adobe]** を電子サインの種類として設定します。
 
-### ドキュメントの確認手順の構成 {#configure-the-review-document-step}
+### 「Review Document」ステップの設定 {#configure-the-review-document-step}
 
-「ドキュメントのレビュー」ステップのドキュメントは、静的ドキュメントにすることができます。同じビジネス・プロセス内で「ドキュメントの生成」ステップによって生成されるドキュメントまたは、[!DNL Workday]レポート・デザイナで作成されたフォーマット済のレポート。 これらいずれの場合でも、[アドビのテキストタグ](https://adobe.com/go/adobesign_text_tag_guide_jp)を使用して、Adobe Sign 固有のコンポーネントの外観や位置を制御できます。文書ソースは、ビジネスプロセス定義内に指定する必要があります。ビジネスプロセスの実行中は、アドホックドキュメントをアップロードできません。
+「Review Document」ステップのドキュメントは、静的ドキュメントである場合もあります。同じビジネスプロセス内の「ドキュメントの生成」ステップによって生成されたドキュメントまたは、 [!DNL Workday] レポート・デザイナ。 これらいずれの場合でも、[アドビのテキストタグ](https://adobe.com/go/adobesign_text_tag_guide_jp)を使用して、Adobe Sign 固有のコンポーネントの外観や位置を制御できます。文書ソースは、ビジネスプロセス定義内に指定する必要があります。ビジネスプロセスの実行中にアドホック文書をアップロードすることはできません。
 
-レビュードキュメントステップでAdobe Signを使用する場合に特有な機能は、シリアル化された署名者グループを持つ機能です。 署名者グループを使用すると、順番にサインインするロールベースのグループを指定できます。 Adobe Signは並列署名グループをサポートしていません。
+「Review Document」ステップでAdobe Signを使用する独自の機能として、直列化された署名者グループを設定できます。 署名者グループを使用すると、ログイン順序が指定された役割ベースのグループを指定できます。 Adobe Signは、並行署名グループをサポートしていません。
 
-ドキュメントの確認手順の構成については、[クイックスタートガイド](https://adobe.com//go/adobesign_workday_quick_start){target=&quot;_blank&quot;}を参照してください。
+Review Document ステップの設定については、 [クイックスタートガイド](https://adobe.com//go/adobesign_workday_quick_start){target=&quot;_blank&quot;}。
 
 ## サポート {#support}
 
-### [!DNL Workday] 支援 {#workday-support}
+### [!DNL Workday] サポート {#workday-support}
 
 [!DNL Workday]この統合の所有者は です。したがって、統合の範囲、機能の要求、日常的処理の問題に関して疑問点が出てきた場合は、まず Workday に問い合わせることになります。
 
-[!DNL Workday]コミュニティには、統合のトラブルシューティングとドキュメントの生成に関する優れた記事がいくつかあります。
+この [!DNL Workday] コミュニティには、統合のトラブルシューティング方法やドキュメントの生成方法に関する次のような優れた記事があります。
 
 * [電子サイン統合のトラブルシューティング](https://doc.workday.com/#/reader/3DMnG~27o049IYFWETFtTQ/zhA~hYllD3Hv1wu0CvHH_g)
 * [「Review Document（文書を確認）」ステップ](https://doc.workday.com/#/reader/3DMnG~27o049IYFWETFtTQ/TboWWKQemecNipWgxLAjqg)
@@ -159,10 +159,10 @@ Adobe Sign で統合キーを生成するには：
 
 Adobe Sign は統合パートナーです。この統合で署名を取得できない場合や、保留中の署名の通知が適切に実行されない場合は、Adobe Sign に問い合わせてください。
 
-Adobe Sign のユーザーは、カスタマーサクセスマネージャー（CSM）に連絡してサポートを受ける必要があります。または、Adobeテクニカルサポートに電話で問い合わせることもできます。1-866-318-4100;製品リストを待ってから、次のように入力します。4、2の順に入力します（プロンプトが表示されます）。
+Adobe Sign のユーザーは、カスタマーサクセスマネージャー（CSM）に連絡してサポートを受ける必要があります。または、Adobeテクニカルサポートに電話で連絡することもできます。1-866-318-4100;製品リストが表示されるまで待ち、次のように入力します。プロンプトに従って 4 と 2
 
 * [文書へのアドビのテキストタグの追加](https://adobe.com/go/adobesign_text_tag_guide)
 
-* [ドキュメントの構成と例](https://www.adobe.com//go/adobesign_workday_quick_start){target=&quot;_blank&quot;}の確認
+* [文書の構成と例の確認](https://www.adobe.com//go/adobesign_workday_quick_start){target=&quot;_blank&quot;}
 
 [**Adobe Sign サポートへのお問い合わせ**](https://www.adobe.com/go/adobesign-support-center)

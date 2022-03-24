@@ -6,11 +6,11 @@ topic-tags: EchoSign/Integrations
 content-type: reference
 locnotes: All languages; screenshots for Tier 1 and 2 only (see the currently published localized page for guidance)
 type: Documentation
-solution: Adobe Sign
+solution: Acrobat Sign, Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: c108714c960b68342539da8e37ac88622c963ed5
+source-git-commit: b326a9afa2c16333d390cac3b30a2c7c741a4360
 workflow-type: tm+mt
 source-wordcount: '3498'
 ht-degree: 3%
@@ -56,7 +56,7 @@ Adobe Signを [!DNL Vault]という新しいグループが *Adobe Sign Admin Gr
 
 * カスタムオブジェクト：Signature オブジェクト、Signatory オブジェクト、Signature Event オブジェクト、Process Locker オブジェクト
 * 署名オブジェクトのページレイアウト
-* 署名イベントオブジェクトのページレイアウト
+* Signature Event object page layout
 * 署名者オブジェクトページレイアウト
 * Process Locker オブジェクトページレイアウト
 * Adobe Sign Rendition type
@@ -240,7 +240,7 @@ Adobe Signプロセスの対象となるすべての文書分類に対して、�
 文書フィールドを設定するには：
 
 1. 「構成」タブに移動し、「 **[!UICONTROL 文書フィールド]** > **[!UICONTROL 共有フィールド]**&#x200B;を選択します。
-1. 「表示セクション」フィールドで、 **[!UICONTROL 表示セクションの作成]** を選択し、 **[!UICONTROL Adobe署名]** をセクションラベルとして使用します。
+1. In the Display Section field, select **[!UICONTROL Create Display Section]** and assign **[!UICONTROL Adobe Signature]** as the Section label.
 
    ![画像](images/create-display-section.png)
 
@@ -257,7 +257,7 @@ Adobe Signプロセスの対象となるすべての文書分類に対して、�
 
    ![画像](images/security-overrides.png)
 
-[ ボールトオーバーレイを無効にする ](disable_vault_overlays__v) は、既存の共有フィールドです。 必要に応じて、Adobe Sign Admin グループのメンバーのみが値を更新できる特定のセキュリティをフィールドに設定できます。
+Disable Vault Overlays (disable_vault_overlays__v) is an existing shared field. 必要に応じて、Adobe Sign Admin グループのメンバーのみが値を更新できる特定のセキュリティをフィールドに設定できます。
 
 ### 手順 8. 文書のレンディションを宣言 {#declare-renditions}
 
@@ -341,8 +341,8 @@ Adobe Sign契約書のライフサイクルには、次の状態があります�
    * **Adobe Sign Draft**:これは、ドキュメントが既にAdobe Signにアップロードされ、その契約書がドラフト状態であることを示す、状態のプレースホルダー名です。 必須状態です。 この状態では、次の 5 つのユーザーアクションを定義する必要があります。
 
       * ドキュメントの状態を *Adobe Sign Authoring* を選択します。 このユーザアクションの名前は、すべてのライフサイクルのすべてのドキュメントタイプで同じである必要があります。 必要に応じて、このアクションの条件を「Adobe Signユーザーアクションを許可する」が「はい」に設定できます。
-      * ドキュメントの状態を *署名Adobe状態*&#x200B;を選択します。 このユーザアクションの名前は、すべてのライフサイクルのすべてのドキュメントタイプで同じである必要があります。 必要に応じて、このアクションの条件を「Adobe Signユーザーアクションを許可する」が「はい」に設定できます。
-      * ドキュメントの状態を *Adobe Sign Cancelled* を選択します。 このユーザアクションの名前は、すべてのライフサイクルのすべてのドキュメントタイプで同じである必要があります。 必要に応じて、このアクションの条件を「Adobe Signユーザーアクションを許可する」が「はい」に設定できます。
+      * ドキュメントの状態を *署名Adobe状態*&#x200B;を選択します。 このユーザアクションの名前は、すべてのライフサイクルのすべてのドキュメントタイプで同じである必要があります。 If necessary, the criteria for this action can be set to “Allow Adobe Sign user actions equals Yes”.
+      * ドキュメントの状態を *Adobe Sign Cancelled* を選択します。 このユーザアクションの名前は、すべてのライフサイクルのすべてのドキュメントタイプで同じである必要があります。 If necessary, the criteria for this action can be set to “Allow Adobe Sign user actions equals Yes”.
       * Web アクション「Adobe Sign」を呼び出すアクション。
       * Web アクション「Adobe Signをキャンセル」を呼び出すアクション。 この状態には、Adobe Sign 管理者ロールが次の操作を実行できるセキュリティが必要です。ドキュメントの表示、コンテンツの表示、フィールドの編集、関係の編集、ソースのダウンロード、表示可能なレンディションの管理、状態の変更を行います。
 
@@ -428,7 +428,7 @@ Adobe Signアカウント管理者が接続するには、次の手順に従う�
 
 1. 選択 **[!UICONTROL 検証]** 」をクリックして、アカウントの詳細を確認します。
 
-   検証が成功すると、次に示すように「ユーザーが正常に検証されました」という通知が表示されます。
+   On successful validation, you see a &#39;User validated successfully&#39; notification, as shown below.
 
    ![画像](images/middleware_validated.png)
 
