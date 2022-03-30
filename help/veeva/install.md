@@ -6,11 +6,11 @@ topic-tags: EchoSign/Integrations
 content-type: reference
 locnotes: All languages; screenshots for Tier 1 and 2 only (see the currently published localized page for guidance)
 type: Documentation
-solution: Acrobat Sign, Adobe Sign
+solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 2c2d7ebe427166222cc62c5ab8f867275a97cce9
+source-git-commit: 4d73ff36408283805386bd3266b683bc187d6031
 workflow-type: tm+mt
 source-wordcount: '3568'
 ht-degree: 3%

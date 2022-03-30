@@ -4,11 +4,11 @@ description: Adobe Sign統合のバージョンとサポートライフサイク
 audience: External
 products: Adobe Sign
 type: Documentation
-solution: Acrobat Sign, Adobe Sign
+solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: c1f22848-7951-4066-84d4-f8cf6c2f3a6f
-source-git-commit: b326a9afa2c16333d390cac3b30a2c7c741a4360
+source-git-commit: 4d73ff36408283805386bd3266b683bc187d6031
 workflow-type: tm+mt
 source-wordcount: '530'
 ht-degree: 40%

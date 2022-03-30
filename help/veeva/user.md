@@ -5,11 +5,11 @@ products: Adobe Sign
 content-type: reference
 locnotes: All languages; screenshots to follow what's there already (seems there is a mix within a given language version of the article)
 type: Documentation
-solution: Acrobat Sign, Adobe Sign
+solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 39a43637-af3f-432e-a784-8f472aa86df5
-source-git-commit: 2c2d7ebe427166222cc62c5ab8f867275a97cce9
+source-git-commit: 4d73ff36408283805386bd3266b683bc187d6031
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 0%
