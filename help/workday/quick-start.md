@@ -24,7 +24,7 @@ ht-degree: 25%
 
 ## 概要 {#overview}
 
-This document is designed to help [!DNL Workday] administrators understand how to customize the [!DNL Workday] Business Processes to include Adobe Sign for obtaining e-signatures. Adobe Signを [!DNL Workday]を作成する方法と変更する方法を知っている必要があります [!DNL Workday] 項目：
+この文書は、 [!DNL Workday] 管理者は、 [!DNL Workday] 電子サインを取得するためのAdobe Signを含むビジネスプロセス。 Adobe Signを [!DNL Workday]を作成する方法と変更する方法を知っている必要があります [!DNL Workday] 項目：
 
 * [!UICONTROL ビジネスプロセスフレームワーク]
 * テナントのセットアップと構成
@@ -55,7 +55,7 @@ A と B の間には 1 対 1 の関係がある [!UICONTROL [!UICONTROL 「Revie
 
 1. 次の *[!UICONTROL 電子サイン統合タイプ]* を *[!UICONTROL Adobe]*&#x200B;を選択します。
 
-1. Add rows to the Signature Grid.
+1. 署名グリッドに行を追加します。
 
    * 署名グリッドには、署名するために文書を送る順序を指定します。各行には、1 つ以上の役割が含まれており、各行は署名プロセスの 1 つのステップを表しています。。
    * 特定のステップ内のロールのすべてのメンバーに、署名イベントが保留中であることが通知されます。
@@ -68,7 +68,7 @@ A と B の間には 1 対 1 の関係がある [!UICONTROL [!UICONTROL 「Revie
 
    ![「Review Document（文書を確認）」ステップの設定](images/configure-rd-stepsmaller-575.png)
 
-1. 必要に応じて、「署名を拒否」アクションをキャプチャする「ユーザーをリダイレクト」を追加します。 When users decline, [!DNL Workday] reroutes the documents to a configured security group for review.
+1. 必要に応じて、「署名を拒否」アクションをキャプチャする「ユーザーをリダイレクト」を追加します。 ユーザーが辞退すると、 [!DNL Workday] ドキュメントをレビュー用に構成されたセキュリティグループに再ルーティングします。
 
 の関連アクションメニューから [!UICONTROL 「Review Document」ステップ]で、 **[!UICONTROL ビジネスプロセス]** > **[!UICONTROL リダイレクトの管理]**&#x200B;を選択します。 次に、次のいずれかを選択します。
 
@@ -80,7 +80,7 @@ A と B の間には 1 対 1 の関係がある [!UICONTROL [!UICONTROL 「Revie
 
 [!UICONTROL ビジネスプロセスフレームワーク] は強力だ。ただし、次のことを確認する必要があります。
 
-* Every Business Process must have a completion step, which is ideally at the end of the business process.
+* すべてのビジネス・プロセスには完了ステップが必要です。これは、理想的にはビジネス・プロセスの最後です。
 
 * 完了ステップは、検索アイコンの関連アクションメニューに設定されます。 これは、BP を「表示」している間にのみ可能であり、「編集」している間は可能ではありません。
 
@@ -116,7 +116,7 @@ A と B の間には 1 対 1 の関係がある [!UICONTROL [!UICONTROL 「Revie
 
 {{括弧内}} の項目は、[アドビのテキストタグ](https://adobe.com/go/adobesign_text_tag_guide_jp)です。
 
-![Example dynamic form](images/script.png)
+![動的フォームの例](images/script.png)
 
 内 [!UICONTROL 「Review Document」ステップ]を使用すると、動的な文書が前の手順から参照され、2 つの署名グループによる順次署名プロセスが定義されます。
 
@@ -128,7 +128,7 @@ A と B の間には 1 対 1 の関係がある [!UICONTROL [!UICONTROL 「Revie
 
 導入 [!DNL Workday] 30、「文書またはタスクの一括配布」タスクを使用して、1 つの文書を大きなグループ (&lt;20K) の個々の署名者に送信できます。 文書 1 件あたり署名 1 件に制限されます。ディストリビューションの作成は、「[!UICONTROL 配布文書またはタスクの作成]」アクションを入力します。
 
-例：従業員の格差選択フォームをすべてのマネージャーに送信 [!UICONTROL Global Modern Services]を選択します。 You can further filter it to individual managers, if desired.
+例：従業員の格差選択フォームをすべてのマネージャーに送信 [!UICONTROL Global Modern Services]を選択します。 必要に応じて、さらに個々のマネージャーにフィルターできます。
 
 また、 **表示/文書またはタスクの配布** 配布の進行状況を追跡するレポート。
 
@@ -154,9 +154,9 @@ A と B の間には 1 対 1 の関係がある [!UICONTROL [!UICONTROL 「Revie
 
 ## 署名済み文書 {#signed-documents}
 
-この [!DNL Workday] 署名サイクルでは、Adobe Signによるすべての電子メール通知が抑制されます。 Users are informed of pending actions within their [!DNL Workday] inbox.
+この [!DNL Workday] 署名サイクルでは、Adobe Signによるすべての電子メール通知が抑制されます。 ユーザーには、自分の [!DNL Workday] 受信トレイ。
 
-Once a document is signed by all Signature Groups, a copy of the signed document is distributed to all the members of the Signature Group via email.
+文書がすべての署名グループによって署名されると、署名された文書のコピーが署名グループのすべてのメンバーに電子メールで配布されます。
 
 この動作を抑制するには、 [!UICONTROL Adobe Sign Success Manager] または [Adobe Sign Support team](https://adobe.com/go/adobesign-support-center)を選択します。
 
@@ -186,7 +186,7 @@ Once a document is signed by all Signature Groups, a copy of the signed document
 
 Adobe Sign は統合パートナーです。この統合で署名を取得できない場合や、保留中の署名の通知が適切に実行されない場合は、Adobe Sign に問い合わせてください。
 
-Adobe Sign Customers should contact their Customer Success Manager for support. または、 [!UICONTROL Adobeテクニカルサポート] 電話番号：1-866-318-4100, wait for product list then enter:プロンプトに従って 4 と 2
+Adobe Signのお客様は、カスタマーサクセスマネージャーに連絡してサポートを受ける必要があります。 または、 [!UICONTROL Adobeテクニカルサポート] 電話番号：1-866-318-4100, wait for product list then enter:プロンプトに従って 4 と 2
 
 * [文書へのアドビのテキストタグの追加](https://www.adobe.com/go/adobesign_text_tag_guide)
 

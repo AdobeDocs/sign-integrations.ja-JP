@@ -1,5 +1,5 @@
 ---
-title: SugarCRM 向けAdobe EchoSign
+title: Adobe EchoSign for SugarCRM
 description: SugarCRM とのAdobe Sign統合を有効にするためのインストールガイド
 product: Adobe Sign
 content-type: reference
@@ -58,9 +58,9 @@ Adobe [!DNL EchoSign] 対象 [!DNL SugarCRM] 新しいバージョンにプラ�
 1. 既にAdobe [!DNL EchoSign] お客様が手順 2 に進みます。
 
    DITA マップに [!DNL EchoSign] アカウント [14 日間無料体験版に新規登録](https://sugarcrmintegration.echosign.com/public/login) オンライン登録手順に従って、Adobe [!DNL EchoSign] アカウント
-1. ログイン [Echo Sign アカウント](http://www.echosign.com) を選択し、次の手順に従います。
+1. Sign in to [Echo Sign account](http://www.echosign.com) and follow these steps:
    1. 選択 **[!UICONTROL アカウント]** タブを選択します。
-   1. 選択 **[!UICONTROL EchoSign API]** をクリックします。
+   1. Select **[!UICONTROL EchoSign API]** on the lower left side.
    1. 選択 **[!UICONTROL API アクセスの有効化]** ページから API キーを取得します。
 
    ![画像](images/enable-api-access.png)
@@ -81,7 +81,7 @@ Adobe [!DNL EchoSign] 対象 [!DNL SugarCRM] 新しいバージョンにプラ�
 
 ### オプション 1:更新を EchoSign にプッシュするコールバックメソッドの設定
 
-Web サイトが公開されている場合は、Adobe EchoSignから [!DNL SugarCRM] インスタンスに設定されます。 [!DNL SugarCRM] 次に、契約書のステータスやイベントを更新し、署名済み文書（署名されている場合）を自動的にリアルタイムでダウンロードします。 ( ファイアウォールの内側にいる場合は、 [!DNL EchoSign] サーバーの IP アドレスを指定するか、このガイドの次の節で説明するスケジュールされたジョブ方式を使用して EchoSign 契約書を更新します )。
+If your website is public facing, you can have Adobe EchoSign ping your [!DNL SugarCRM] instance whenever a new event occurs. [!DNL SugarCRM] 次に、契約書のステータスやイベントを更新し、署名済み文書（署名されている場合）を自動的にリアルタイムでダウンロードします。 (If you are behind a firewall, you need to whitelist the [!DNL EchoSign] server IP addresses or use the Scheduled Job method of updating EchoSign Agreements described in the next section of this guide).
 
 1. 移動 **[!UICONTROL 管理]** > **[!UICONTROL Adobe EchoSign Settings]**&#x200B;を選択します。
 1. チェックボックスをオンにします。 **[!UICONTROL EchoSign コールバックメソッドの使用]** 契約のイベントおよびステータスを更新します。
@@ -89,11 +89,11 @@ Web サイトが公開されている場合は、Adobe EchoSignから [!DNL Suga
 
 ### オプション 2:スケジュールされたジョブの設定 [!DNL SugarCRM] ファイアウォール内のインスタンス
 
-この [!DNL EchoSign] 対象 [!DNL SugarCRM] プラグインは、スケジュールされたジョブを使用してクエリを実行することもできます [!DNL EchoSign] 」を参照してください。 スケジュールされたジョブクエリ方法は、オンプレミスの場合に使用できます [!DNL SugarCRM] インストールはファイアウォールの内側で行われます。
+この [!DNL EchoSign] 対象 [!DNL SugarCRM] プラグインは、スケジュールされたジョブを使用してクエリを実行することもできます [!DNL EchoSign] 」を参照してください。 Scheduled job query method can be used if you have an on-premise [!DNL SugarCRM] installation is behind a firewall.
 
 設定するには：
 
-1. 移動 **[!UICONTROL 管理]** > **[!UICONTROL スケジューラ]**&#x200B;を選択します。
+1. Go to **[!UICONTROL Administration]** > **[!UICONTROL Scheduler]**.
 1. タブのドロップダウンメニューから、「 **[!UICONTROL スケジューラの作成]**&#x200B;を選択します。
 1. 「ジョブ名」を入力します。
 1. 「ジョブ」フィールドで、「 **[!UICONTROL Adobe EchoSign Status Updater]**&#x200B;を選択します。
@@ -105,7 +105,7 @@ Web サイトが公開されている場合は、Adobe EchoSignから [!DNL Suga
 
 1. 移動 **[!UICONTROL 管理]** > **[!UICONTROL Adobe EchoSign Settings]**&#x200B;を選択します。
 1. チェックボックスをオフにする **[!UICONTROL EchoSign コールバックメソッドの使用]** 契約のイベントおよびステータスを更新します。
-1. 選択 **[!UICONTROL 保存]**を選択します。
+1. Select **[!UICONTROL Save]**.
 注意：スケジュールの有効化 [!DNL SugarCRM] を選択します。
 
 EchoSign 契約書を他の [!DNL SugarCRM] モジュール：
@@ -146,13 +146,13 @@ Adobe [!DNL EchoSign] 取引先企業、取引先担当者、見積もりなど�
 
 ### Adobe [!DNL EchoSign] 契約書 {#create-edit-agreements}
 
-契約書は、 [!DNL EchoSign] 契約書モジュールまたは [!DNL SugarCRM] を選択します。
+You can create Agreements through the [!DNL EchoSign] Agreements module or through modules configured by a [!DNL SugarCRM] administrator.
 
 1. 」を [!UICONTROL アクション] リストを [!UICONTROL EchoSign 契約書] 」タブで、「 **[!UICONTROL EchoSign 契約書の作成]**&#x200B;を選択します。
 1. のメインセクション [!DNL EchoSign] 「契約書」では、次の情報を入力するか、様々な契約書オプションから選択します。
 
    1. **[!UICONTROL 名前：]** 契約書の名前を入力します。
-   1. **[!UICONTROL 署名の種類：]** 文書で受け付ける署名のタイプを選択します。 オプションには、「電子サイン」と「Fax 署名」があります。
+   1. **[!UICONTROL Signature Type:]** Select the type of signature accepted for the document. オプションには、「電子サイン」と「Fax 署名」があります。
    1. **[!UICONTROL この契約書にも署名する必要があります：]** 送信者も契約書に署名する必要があるかどうかを指定します。
    1. **[!UICONTROL 署名の順序：]** 前の「 I Also Need to Sign This Agreement 」オプションがオンになっている場合は、送信者と受信者が署名する順序も選択します。
    1. **[!UICONTROL 受信者に署名を依頼：]** 受信者に文書への署名を促す頻度を選択します。 オプションは、[Daily] または [Weekly] です。
@@ -166,7 +166,7 @@ Adobe [!DNL EchoSign] 取引先企業、取引先担当者、見積もりなど�
       ![画像](images/create-agreements.png)
 
 
-1. 」を [!UICONTROL セキュリティオプション] セクション [!UICONTROL EchoSign 契約書]で、次の情報を入力します。
+1. In the [!UICONTROL Security Options] section of the [!UICONTROL EchoSign Agreement], enter the following information:
 
    a) **[!UICONTROL 署名に必要なパスワード：]** 受信者が文書に署名する前にパスワードを入力する必要があるかどうかを指定します。
 b) **[!UICONTROL 開くパスワード：]** 受信者が契約書または署名済みの契約書のPDFを開く前に、パスワードを入力する必要があるかどうかを示す c) **[!UICONTROL パスワード：]** 文書への署名や文書を開くときに使用するパスワードを指定します。
@@ -174,14 +174,14 @@ d) **[!UICONTROL パスワードの確認：]** 文書への署名または文�
 
 1. の「その他」セクション [!DNL EchoSign] 契約書で、次の情報を入力します。
 
-   a) **[!UICONTROL ユーザー：]** 以下を指定します [!DNL SugarCRM] を選択します。 デフォルトは、現在システムにログインしているユーザーです。
-b) **[!UICONTROL グループ版：]** プライマリチームの割り当てを変更するには、新しいプライマリチームの名前を入力します。 レコードに追加のチームを割り当てるには、「 **[!UICONTROL 選択]** をクリックし、チームリストからチームを選択するか、「 **[!UICONTROL 追加先]** を使用してチームフィールドを追加し、チーム名を入力します。 詳細については、 [!DNL SugarCRM] アプリケーションガイド
+   a) **[!UICONTROL User:]** Specify a [!DNL SugarCRM] user. デフォルトは、現在システムにログインしているユーザーです。
+b) **[!UICONTROL グループ版：]** プライマリチームの割り当てを変更するには、新しいプライマリチームの名前を入力します。 To assign additional teams to the record, click **[!UICONTROL Select]** and select a team from the Team List, or select **[!UICONTROL Add to]** to add team fields and enter the team names. 詳細については、 [!DNL SugarCRM] アプリケーションガイド
 
 1. 選択 **[!UICONTROL 保存]**&#x200B;を選択します。
 
 ### [!DNL EchoSign] 契約書の詳細ビュー {#agreement-detail-view}
 
-DITA マップの [!DNL EchoSign] 契約書が保存されると、契約書の詳細ビューには次のサブパネルが含まれます。
+After an [!DNL EchoSign] Agreement is saved, the Detail View of the agreement includes the following subpanels:
 
 * **[!UICONTROL 受信者：]** このサブパネルにリストされた連絡先は、「文書」サブパネルで指定された文書を受け取ります。 契約書を送信する前に、1 人以上の受信者を追加する必要があります。
 * **[!UICONTROL 文書：]** 新しい文書をアップロードするか、既ににアップロードされている文書を選択します。 [!DNL SugarCRM] をクリックして署名用に送信します。

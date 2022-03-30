@@ -45,7 +45,7 @@ Adobe Signの 30 日間体験版をリクエストするには、こちらに入
 
 ![体験版リクエストフォーム](images/trial-land.png)
 
-Adobe Signのオンボーディングスペシャリストは、1 営業日以内に [!DNL Workday]を選択します。 完了すると、次のような確認メールが届きます。
+Adobe Signのオンボーディングスペシャリストは、1 営業日以内に [!DNL Workday]を選択します。 完了すると、以下のような確認メールが届きます。
 
 ![Adobe Sign からのようこそメール](images/welcome-email-2020.png)
 
