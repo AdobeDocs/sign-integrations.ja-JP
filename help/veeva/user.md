@@ -9,7 +9,7 @@ solution: Acrobat Sign, Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 39a43637-af3f-432e-a784-8f472aa86df5
-source-git-commit: 1eafeb73f7b7055fa958b15a02148898f7c9d406
+source-git-commit: 2c2d7ebe427166222cc62c5ab8f867275a97cce9
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 0%
@@ -56,7 +56,7 @@ Adobe Acrobat Sign for Veeva を使用して契約書を送信するには：
 
    ![](images/choose-document-type.png)
 
-1. 選択 **[!UICONTROL Ok]** を選択してダイアログを閉じます。
+1. ダイアログを閉じるには、「 **[!UICONTROL Ok]**&#x200B;を選択します。
 
 1. 選択 **[!UICONTROL 次へ]**&#x200B;を選択します。
 
@@ -117,7 +117,7 @@ Adobe Acrobat Sign for Veeva を使用して契約書を送信するには：
 
 1. すべての署名が取得され、Adobe Acrobat Sign で完了すると、Vault での文書のステータスがに変わります。 [!UICONTROL 承認済み]を選択します。
 
-1. 選択 **[!UICONTROL 文書ファイル]** 」オプションを選択し、「 **[!UICONTROL レンディション]** 」セクションを参照してください。 ドキュメントが承認済み状態になると、「Adobe Sign Rendition」という新しいレンディションが自動的に作成されます。
+1. 選択 **[!UICONTROL 文書ファイル]** 」オプションを選択し、「 **[!UICONTROL レンディション]** 」セクションを参照してください。 ドキュメントが承認済み状態になると、「Adobe Sign Rendition」というレンディションが自動的に作成されます。
 
    ![](images/document-files.png)
 

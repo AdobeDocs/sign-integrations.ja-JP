@@ -10,9 +10,9 @@ solution: Acrobat Sign, Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 1eafeb73f7b7055fa958b15a02148898f7c9d406
+source-git-commit: 2c2d7ebe427166222cc62c5ab8f867275a97cce9
 workflow-type: tm+mt
-source-wordcount: '3573'
+source-wordcount: '3568'
 ht-degree: 3%
 
 ---
@@ -255,7 +255,7 @@ Adobe Acrobat Sign プロセスの対象となるすべての文書分類に対�
 
    ![画像](images/use-shared-fields.png)
 
-1. 両方のフィールドには、Adobe Sign Admin Group のメンバーのみが値を更新できる特定のセキュリティが必要です。
+1. 両方のフィールドに、Adobe Sign Admin Group のメンバーのみが値を更新できる特定のセキュリティが設定されている必要があります。
 
    ![画像](images/security-overrides.png)
 
