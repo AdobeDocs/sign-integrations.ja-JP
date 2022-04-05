@@ -9,7 +9,7 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 39a43637-af3f-432e-a784-8f472aa86df5
-source-git-commit: 4d73ff36408283805386bd3266b683bc187d6031
+source-git-commit: 076c575d179f576366c1d9a76be0a582154574b1
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 0%
@@ -86,7 +86,7 @@ Adobe Acrobat Sign for Veeva を使用して契約書を送信するには：
 
    ![](images/select-adobe-sign.png)
 
-1. Adobe Acrobat Sign アカウントで UMG（複数グループのユーザー）機能が有効になっており、送信者が複数のグループに属している場合は、次のようなダイアログが表示されます。 ダイアログでグループを選択し、「 **[!UICONTROL Ok]**&#x200B;を選択します。
+1. Adobe Acrobat Sign アカウントで UMG（複数グループのユーザー）機能が有効になっており、送信者が複数のグループに属している場合は、次のようなダイアログが表示されます。 ダイアログでグループを選択し、「 **[!UICONTROL 次へ]**&#x200B;を選択します。
 
    ![](images/umg-dialog.png)
 
