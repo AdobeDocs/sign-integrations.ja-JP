@@ -10,7 +10,7 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 5481293e84bd72e09df2c2f4b5ce27c5fdea28d0
+source-git-commit: 6b06bb8562ea7464fdbc23a25a4be3572eccdd1e
 workflow-type: tm+mt
 source-wordcount: '3909'
 ht-degree: 3%
@@ -77,7 +77,7 @@ Adobe Acrobat Signを [!DNL Vault]という新しいグループが *Adobe Sign 
 
 **署名オブジェクトフィールド**
 
-| フィールド | ラベル | タイプ | 説明 |
+| フィールド | ラベル | タイプ | 説明         |
 |:---|:---|:---|:------- | 
 | external_id__c | 契約書 ID | 文字列 (100) | Adobe Acrobat Signの一意の契約書 ID を保持 |
 | file_hash__c | ファイルハッシュ | 文字列 (50) | Adobe Acrobat Signに送信されたファイルの md5 チェックサムを保持します |
