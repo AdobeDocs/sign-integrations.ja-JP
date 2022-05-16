@@ -8,10 +8,10 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 378cac01-87c9-4288-8839-482121d49402
-source-git-commit: 0577f30c35a348174bed27c6eb309fce43f03eca
+source-git-commit: c54f848d7832e831dc10c8069ac572226f0b31e8
 workflow-type: tm+mt
-source-wordcount: '4871'
-ht-degree: 32%
+source-wordcount: '4873'
+ht-degree: 33%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 32%
 
 Adobe Sign [!DNL NetSuite] は、 [!DNL NetSuite]を選択します。 Adobe Signは、 [!DNL NetSuite] 統合により、契約書、見積書、その他の文書など、電子サインが必要な契約書を [!DNL NetSuite]を選択します。 顧客、リード、見積などから、Adobe Signの契約書を作成して送信できます [!DNL NetSuite] レコード、 Adobe Sign updates [!DNL NetSuite] 契約書のステータスを保持し、関連する [!DNL NetSuite] レコードは、完全に実行された後に作成されます。 送信元のすべての契約書の履歴を表示できます。 [!DNL NetSuite] を選択します。
 
-詳しくは、 [Adobe Sign [!DNL NetSuite] リリースノート](https://experienceleague.adobe.com/docs/sign-integrations/using/netsuite/release-notes.html?lang=en) 」を参照してください。
+詳しくは、 [Adobe Sign for NetSuite リリースノート](https://experienceleague.adobe.com/docs/sign-integrations/using/netsuite/release-notes.html?lang=en) 」を参照してください。
 
 ## バンドルのインストールと OAuth の設定 {#install}
 
@@ -66,7 +66,7 @@ Adobe Sign [!DNL NetSuite] は、 [!DNL NetSuite]を選択します。 Adobe Sig
 
 1. 既にAdobe Signのお客様アカウントの場合は、次の手順に従ってください。  [インストールまたはアップグレード後の OAuth の設定](#oauth)を選択します。
 
-   Adobe Signアカウントをお持ちでない場合は、 [エンタープライズ版の体験版に新規登録](https://esign.adobe.com/adobe-sign-[!DNL NetSuite]-trial-registration.html) アカウントを使用して、システムをテストします。 オンラインの登録手順に従って、Adobe Sign アカウントを有効にしてください。
+   Adobe Signアカウントをお持ちでない場合は、 [エンタープライズ版の体験版に新規登録](https://esign.adobe.com/adobe-sign-DNL NetSuite-trial-registration.html) アカウントを使用してシステムをテストします。 オンラインの登録手順に従って、Adobe Sign アカウントを有効にしてください。
 
 ## インストールまたはアップグレード後の OAuth の設定 {#oauth}
 
@@ -123,7 +123,7 @@ Adobe Signは、OAuth 2.0 を使用して、 [!DNL NetSuite]を選択します�
    >宛先 :
    >
    >
-   >を選択します。**sandbox.**[!DNL NetSuite].com/app/site/hosting/scriptlet.nl?script=745&amp;deploy=1&amp;web_access_point=https://echosign.com
+   >を選択します。**sandbox.** netsuite.com/app/site/hosting/scriptlet.nl?script=745&amp;deploy=1&amp;web_access_point=https://echosign.com
 
 ## バンドルの更新（既存ユーザー）
 
@@ -355,7 +355,7 @@ Adobe Sign統合バンドルは既に、Adobe Sign契約オブジェクトを多
 
    >[!NOTE]
    >
-   >詳しくは、 *[カスタムレコードタイプのアクセス許可リストを設定する](https://system.[!DNL NetSuite].com/app/help/helpcenter.nl?fid=section_N2879931.html)* 」トピックを参照してください
+   >詳細については、NetSuite Help Center のトピック「*[Setting Up a Permissions List for a Custom Record Type](https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N2879931.html)*」を参照してください。
 
    1. 「*Role*」リストから役割を選択します。
    1. 設定 *レベル* を **[!UICONTROL フル]**&#x200B;を選択します。
@@ -573,7 +573,7 @@ Adobe Signは、 [!DNL NetSuite] 見積のPDFが自動的に生成され、契�
 
 ## バンドルのアンインストール
 
-バンドルをアンインストールするには、 [!DNL NetSuite] ヘルプ 詳しくは、 *[バンドルのアンインストール](https://docs.oracle.com/cloud/latest/[!DNL NetSuite]cs_gs/NSBDL/NSBDL.pdf)* トピックを [!DNL NetSuite] 詳しくは、ヘルプセンターを参照してください。
+バンドルをアンインストールするには、 [!DNL NetSuite] ヘルプ 詳しくは、 *[バンドルのアンインストール](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N3400972.html)* トピックを [!DNL NetSuite] 詳しくは、ヘルプセンターを参照してください。
 
 バンドルをアンインストールすると、署名されていない契約書は削除されます。 署名済み契約書および対応する監査PDFファイルは影響を受けません。
 
