@@ -11,9 +11,9 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 8b6fa8b4-e240-4ebe-ae2a-8807d75a6c69
-source-git-commit: 4d73ff36408283805386bd3266b683bc187d6031
+source-git-commit: 2cc0ea55ee7dca3682896c61c85eec29a555339c
 workflow-type: tm+mt
-source-wordcount: '1348'
+source-wordcount: '1347'
 ht-degree: 25%
 
 ---
@@ -78,7 +78,7 @@ A と B の間には 1 対 1 の関係がある [!UICONTROL [!UICONTROL 「Revie
 
 ## ビジネスプロセスステップのメモ {#business-process-step-notes}
 
-[!UICONTROL ビジネスプロセスフレームワーク] は強力だ。ただし、次のことを確認する必要があります。
+この [!UICONTROL ビジネスプロセスフレームワーク] は強力だ。ただし、次のことを確認する必要があります。
 
 * すべてのビジネス・プロセスには完了ステップが必要です。これは、理想的にはビジネス・プロセスの最後です。
 
@@ -114,7 +114,7 @@ A と B の間には 1 対 1 の関係がある [!UICONTROL [!UICONTROL 「Revie
 
 以下の動的なオファーレターは、 [!DNL Workday] リッチテキストエディター、 ハイライトされた項目 *グレー* は [!DNL Workday] コンテキストデータを参照する提供されたオブジェクト。
 
-{{括弧内}} の項目は、[アドビのテキストタグ](https://adobe.com/go/adobesign_text_tag_guide_jp)です。
+アイテム {{brackets}} は [Adobeテキストタグ](https://adobe.com/go/adobesign_text_tag_guide_jp)を選択します。
 
 ![動的フォームの例](images/script.png)
 
@@ -158,7 +158,7 @@ A と B の間には 1 対 1 の関係がある [!UICONTROL [!UICONTROL 「Revie
 
 文書がすべての署名グループによって署名されると、署名された文書のコピーが署名グループのすべてのメンバーに電子メールで配布されます。
 
-この動作を抑制するには、 [!UICONTROL Adobe Sign Success Manager] または [Adobe Sign Support team](https://adobe.com/go/adobesign-support-center)を選択します。
+この動作を抑制するには、 [!UICONTROL Adobe Sign Success Manager] または [Adobe Sign Support team](https://adobe.com/go/adobesign-support-center_jp)を選択します。
 
 範囲内 [!DNL Workday]をクリックすると、すべてのプロセスレコードで署名済み文書にアクセスできます。 次のことが分かります。
 
@@ -186,7 +186,7 @@ A と B の間には 1 対 1 の関係がある [!UICONTROL [!UICONTROL 「Revie
 
 Adobe Sign は統合パートナーです。この統合で署名を取得できない場合や、保留中の署名の通知が適切に実行されない場合は、Adobe Sign に問い合わせてください。
 
-Adobe Signのお客様は、カスタマーサクセスマネージャーに連絡してサポートを受ける必要があります。 または、 [!UICONTROL Adobeテクニカルサポート] 電話番号：1-866-318-4100, wait for product list then enter:プロンプトに従って 4 と 2
+Adobe Signのお客様は、 [!UICONTROL カスタマーサクセスマネージャー] を参照してください。 または、 [!UICONTROL Adobeテクニカルサポート] 電話番号：1-866-318-4100, wait for product list then enter:プロンプトに従って 4 と 2
 
 * [文書へのアドビのテキストタグの追加](https://www.adobe.com/go/adobesign_text_tag_guide)
 
