@@ -8,7 +8,7 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 378cac01-87c9-4288-8839-482121d49402
-source-git-commit: 581b336b4a3610cfe3fd0d92f2a4eebe55b89b27
+source-git-commit: 568d001a05bd0e642036b4a73067689e987c02ba
 workflow-type: tm+mt
 source-wordcount: '4870'
 ht-degree: 33%
@@ -581,7 +581,7 @@ Adobe Signは、 [!DNL NetSuite] 見積のPDFが自動的に生成され、契�
 
 ## トラブルシューティング
 
-### アップデートの進行状況の確認  {#determineprogress}
+### アップデートの進行状況の確認 {#determineprogress}
 
 アップデートに長い時間がかかっている場合は、Adobe Sign Bundle Installation スクリプトの「Execution Log」サブタブでアップデートの進行状況を確認できます。それには以下を実行します。
 
