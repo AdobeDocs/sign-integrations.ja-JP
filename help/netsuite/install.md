@@ -8,9 +8,9 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 378cac01-87c9-4288-8839-482121d49402
-source-git-commit: 4d73ff36408283805386bd3266b683bc187d6031
+source-git-commit: 0577f30c35a348174bed27c6eb309fce43f03eca
 workflow-type: tm+mt
-source-wordcount: '4870'
+source-wordcount: '4871'
 ht-degree: 32%
 
 ---
@@ -243,7 +243,7 @@ Adobe Sign統合バンドルを使用すると、 [!DNL NetSuite] 送信元の�
 
    * 「SuiteScript」セクションで、「**[!UICONTROL Client SuiteScript]**」オプションと「**[!UICONTROL Server SuiteScript]**」オプションを有効にし、両方の利用規約に同意します。
 
-1. 選択 **[!UICONTROL 保存]**&#x200B;を選択します。
+1. 「**[!UICONTROL 保存]**」を選択します。
 
    オプションは図のように設定されます。
 
@@ -312,7 +312,7 @@ Adobe Sign統合バンドルは既に、Adobe Sign契約オブジェクトを多
 
    * を **[!UICONTROL 対象]** サブタブがアクティブです（デフォルトでアクティブ）。アクセスを許可する役割またはユーザーを選択します。 すべての役割およびユーザーにアクセスを許可する場合は、それぞれ「**[!UICONTROL Select all]**」オプションを有効にします。
 
-   * 選択 **[!UICONTROL 保存]**&#x200B;を選択します。 変更確認が表示されたら、「 **[!UICONTROL 戻る]**&#x200B;を選択します。
+   * 「**[!UICONTROL 保存]**」を選択します。変更確認が表示されたら、「 **[!UICONTROL 戻る]**&#x200B;を選択します。
 
 
 1. select **[!UICONTROL リスト]** 」をクリックすると、 *スクリプト* リストページです。
@@ -355,7 +355,7 @@ Adobe Sign統合バンドルは既に、Adobe Sign契約オブジェクトを多
 
    >[!NOTE]
    >
-   >詳しくは、 *[カスタムレコードタイプのアクセス許可リストを設定する](https://system.[!DNL NetSuite].com/app/help/helpcenter.nl?fid=section_N2879931.html)* トピックを [!DNL NetSuite] 詳細については、ヘルプセンター
+   >詳しくは、 *[カスタムレコードタイプのアクセス許可リストを設定する](https://system.[!DNL NetSuite].com/app/help/helpcenter.nl?fid=section_N2879931.html)* 」トピックを参照してください
 
    1. 「*Role*」リストから役割を選択します。
    1. 設定 *レベル* を **[!UICONTROL フル]**&#x200B;を選択します。

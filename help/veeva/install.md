@@ -10,7 +10,7 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 6b06bb8562ea7464fdbc23a25a4be3572eccdd1e
+source-git-commit: 0577f30c35a348174bed27c6eb309fce43f03eca
 workflow-type: tm+mt
 source-wordcount: '3909'
 ht-degree: 3%
@@ -77,7 +77,7 @@ Adobe Acrobat Signを [!DNL Vault]という新しいグループが *Adobe Sign 
 
 **署名オブジェクトフィールド**
 
-| フィールド | ラベル | タイプ | 説明         |
+| フィールド | ラベル | タイプ | 説明 |
 |:---|:---|:---|:------- | 
 | external_id__c | 契約書 ID | 文字列 (100) | Adobe Acrobat Signの一意の契約書 ID を保持 |
 | file_hash__c | ファイルハッシュ | 文字列 (50) | Adobe Acrobat Signに送信されたファイルの md5 チェックサムを保持します |
@@ -153,7 +153,7 @@ Adobe Sign統合タスクログオブジェクトフィールド
 |:--|:--|:--|:---------| 
 | start_date__c | 開始日 | DateTime | タスク開始日 |
 | end_date__c | 終了日 | DateTime | タスク終了日 |
-| task_status__c | タスクの状態 | 候補リスト | 保留タスクの状態： <br><br> 完了 (task_completed__c) 完了（エラーあり） (task_completed_with_errors__c) 失敗 (task_failed__c) |
+| task_status__c | タスクの状態 | 候補リスト | 保留タスクの状態： <br /> 完了 (task_completed__c) 完了（エラーあり） (task_completed_with_errors__c) 失敗 (task_failed__c) |
 | task_type__c | タスクタイプ | 候補リスト | 保留タスクの種類： <br><br> 契約イベント同期 (agreements_events_synchronization__c) 契約イベント処理 (agreements_events_processing__c) |
 | messages__c | メッセージ | 長い (32000) | タスクメッセージを保持 |
 
