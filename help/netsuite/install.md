@@ -8,9 +8,9 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 378cac01-87c9-4288-8839-482121d49402
-source-git-commit: c54f848d7832e831dc10c8069ac572226f0b31e8
+source-git-commit: 581b336b4a3610cfe3fd0d92f2a4eebe55b89b27
 workflow-type: tm+mt
-source-wordcount: '4873'
+source-wordcount: '4870'
 ht-degree: 33%
 
 ---
@@ -66,7 +66,7 @@ Adobe Sign [!DNL NetSuite] は、 [!DNL NetSuite]を選択します。 Adobe Sig
 
 1. 既にAdobe Signのお客様アカウントの場合は、次の手順に従ってください。  [インストールまたはアップグレード後の OAuth の設定](#oauth)を選択します。
 
-   Adobe Signアカウントをお持ちでない場合は、 [エンタープライズ版の体験版に新規登録](https://esign.adobe.com/adobe-sign-DNL NetSuite-trial-registration.html) アカウントを使用してシステムをテストします。 オンラインの登録手順に従って、Adobe Sign アカウントを有効にしてください。
+   Adobe Sign アカウントをお持ちでない場合は、[エンタープライズ体験版アカウントに新規登録](https://esign.adobe.com/adobe-sign-netsuite-trial-registration.html)して、システムをテストすることができます。オンラインの登録手順に従って、Adobe Sign アカウントを有効にしてください。
 
 ## インストールまたはアップグレード後の OAuth の設定 {#oauth}
 
@@ -111,19 +111,19 @@ Adobe Signは、OAuth 2.0 を使用して、 [!DNL NetSuite]を選択します�
    >サンドボックスアカウントで OAuth を設定すると、認証の完了時に「Could not determine customer comp ID」というエラーが発生する場合があります。
    >
    >
-   >続行するには、URL(system) のアカウントドメイン部分を変更する必要があります。[!DNL NetSuite].com) にアクセスして、 [!DNL NetSuite] サンドボックス：
+   >続行するには、ブラウザーで URL(system.netsuite.com) のアカウントドメイン部分を変更して、 [!DNL NetSuite] サンドボックス：
    >
    >
    >変更:
    >
    >
-   >system.[!DNL NetSuite].com/app/site/hosting/scriptlet.nl?script=745&amp;deploy=1&amp;web_access_point=https://echosign.com
+   >system.netsuite.com/app/site/hosting/scriptlet.nl?script=745&amp;deploy=1&amp;web_access_point=https://echosign.com
    >
    >
    >宛先 :
    >
    >
-   >を選択します。**sandbox.** netsuite.com/app/site/hosting/scriptlet.nl?script=745&amp;deploy=1&amp;web_access_point=https://echosign.com
+   >system.**sandbox.** netsuite.com/app/site/hosting/scriptlet.nl?script=745&amp;deploy=1&amp;web_access_point=https://echosign.com
 
 ## バンドルの更新（既存ユーザー）
 
@@ -581,7 +581,7 @@ Adobe Signは、 [!DNL NetSuite] 見積のPDFが自動的に生成され、契�
 
 ## トラブルシューティング
 
-### アップデートの進行状況の確認
+### アップデートの進行状況の確認  {#determineprogress}
 
 アップデートに長い時間がかかっている場合は、Adobe Sign Bundle Installation スクリプトの「Execution Log」サブタブでアップデートの進行状況を確認できます。それには以下を実行します。
 
