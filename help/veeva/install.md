@@ -10,9 +10,9 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 0577f30c35a348174bed27c6eb309fce43f03eca
+source-git-commit: c60fd19fa52fb203fd19da69d58792ef6fb88eec
 workflow-type: tm+mt
-source-wordcount: '3909'
+source-wordcount: '3931'
 ht-degree: 3%
 
 ---
@@ -451,6 +451,10 @@ Adobe Acrobat Signアカウント管理者が接続するには、次の手順�
 1. 選択 **[!UICONTROL ログイン]** を選択します。
 
    ![ミドルウェア・ログインのイメージ](images/middleware_login.png)
+
+1. アプリケーションへのアクセスレベルを認証するには、Acrobat Sign OAuth スコープを **[!UICONTROL アカウント]** または **[!UICONTROL グループ]**&#x200B;を選択します。 次に、 **[!UICONTROL 承認]**&#x200B;を選択します。
+
+   ![画像](images/middleware_oauth.png)
 
 1. 開いたAdobe Acrobat Signログインページで、アカウント管理者の電子メールアドレスとパスワードを入力し、「 **[!UICONTROL ログイン]**&#x200B;を選択します。
 
