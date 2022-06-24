@@ -10,7 +10,7 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: c60fd19fa52fb203fd19da69d58792ef6fb88eec
+source-git-commit: c164692d78608c436d136caef44b19fe8d37b9d8
 workflow-type: tm+mt
 source-wordcount: '3931'
 ht-degree: 3%
@@ -52,7 +52,7 @@ Adobe Acrobat Signを [!DNL Vault]という新しいグループが *Adobe Sign 
 
 ### 手順 2. パッケージのデプロイ {#deploy-package}
 
-[パッケージのデプロイ](https://helpx.adobe.com/content/dam/help/en/PKG-AdobeSign-Integration.zip) の手順に従います。 デプロイされると、パッケージは次のものを作成します。
+[パッケージのデプロイ](https://helpx.adobe.com/content/dam/help/en/PKG-AdobeSign-Integration-veeva.zip) の手順に従います。 デプロイされると、パッケージは次のものを作成します。
 
 * カスタムオブジェクト：Signature オブジェクト、Signatory オブジェクト、Signature Event オブジェクト、Process Locker オブジェクト
 * 署名オブジェクトのページレイアウト
@@ -319,7 +319,7 @@ Adobe Acrobat Signと Vault の統合では、次の 2 つの Web アクショ�
 
 Adobe Acrobat Sign契約書のライフサイクルには、次の状態があります。
 
-* ドラフト
+* 下書き
 * AUTHORING または DOCUMENTS_NOT_YET_PROCESSED
 * OUT_FOR_SIGNATURE または OUT_FOR_APPROVAL
 * 署名済みまたは承認済み
