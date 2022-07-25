@@ -10,9 +10,9 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: c164692d78608c436d136caef44b19fe8d37b9d8
+source-git-commit: 163c74a2e03aeaa0627d972b791166d4ea4e66a6
 workflow-type: tm+mt
-source-wordcount: '3931'
+source-wordcount: '3933'
 ht-degree: 3%
 
 ---
@@ -52,7 +52,7 @@ Adobe Acrobat Signを [!DNL Vault]という新しいグループが *Adobe Sign 
 
 ### 手順 2. パッケージのデプロイ {#deploy-package}
 
-[パッケージのデプロイ](https://helpx.adobe.com/content/dam/help/en/PKG-AdobeSign-Integration-veeva.zip) の手順に従います。 デプロイされると、パッケージは次のものを作成します。
+[パッケージのデプロイ](https://helpx.adobe.com/content/dam/help/en/sign-integrations-new/veeva-vault/PKG-AdobeSign-Integration-Veeva.zip) の手順に従います。 デプロイされると、パッケージは次のものを作成します。
 
 * カスタムオブジェクト：Signature オブジェクト、Signatory オブジェクト、Signature Event オブジェクト、Process Locker オブジェクト
 * 署名オブジェクトのページレイアウト
