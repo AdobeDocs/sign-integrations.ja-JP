@@ -10,9 +10,9 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 163c74a2e03aeaa0627d972b791166d4ea4e66a6
+source-git-commit: 08d55f79fd4fff8f13dc23b9d155e501ca038be1
 workflow-type: tm+mt
-source-wordcount: '3933'
+source-wordcount: '4169'
 ht-degree: 3%
 
 ---
@@ -289,13 +289,40 @@ Adobe Acrobat Signプロセスに適格なすべての文書分類に対して�
 
 新しいレンディションのタイプは *Adobe Signレンディション (adobe_sign_rendition__c)* は、Vault との統合によって、署名済みPDF文書をAdobe Acrobat Signにアップロードします。 Adobe Acrobat Signature に適格な各文書タイプに対してAdobe Signレンディションを宣言する必要があります。
 
+Adobe Acrobat Signature の対象となる各文書タイプに対して、元のレンディションを宣言する必要があります。
+
 ![レンディションの種類の画像](images/rendition-type.png)
 
 ![画像](images/edit-details-clinical.png)
 
-新しいレンディションのタイプは *元のレンディション (original_rendition__c)* は、Vault 統合によって、元の表示可能なレンディションの保存に使用するレンディションの名前として使用されます（署名済みの文書が表示可能レンディションとしてインポートされた場合）。
+新しいレンディションのタイプは *元のレンディション* (original_rendition__c) は、Vault 統合で、オリジナルの表示可能なレンディションの保存に使用するレンディションの名前として使用されます（署名済みの文書が表示可能レンディションとしてインポートされる場合）。
 
 ![画像](images/original-rendition.png)
+
+必要に応じて、ボールトに新しいレンディションタイプのAdobe監査追跡レンディション (adobe_audit_trail_rendition__c) を割り当てることができます。このレンディションは、ボールトとの統合でAdobe監査追跡レポートを格納するために使用されます。
+
+次の手順に従って、監査追跡レンディションAdobeを設定します。
+
+1. 移動 **レンディションの種類** > **新しいレンディションタイプの作成**を選択します。
+新しいレンディションタイプを Audit Trail Rendition(adobe_audit_trail_rendition__c) として作成します。
+
+   ![画像](images/audit-trail-rendition-setup-1.png)
+
+1. 文書の監査証跡レンディションAdobeを表示およびダウンロードするには、 *Adobe監査追跡レンディション* Adobe Acrobat Signature の対象となる各文書タイプについて。
+
+   ![画像](images/audit-trail-rendition-setup-2.png)
+
+**注意**:を有効にすると、監査レポートを署名済みレンディションに添付できます。 **[!UICONTROL 署名されたレンディションに監査レポートを添付]** また、 ****[!UICONTROL Acrobat Sign Rendition の表示]**** 」オプションを選択します。
+
+![画像](images/audit-trail-rendition-setup-3.png)
+
+上記の設定でユーザーが電子署名契約書を選択すると、Adobe Acrobat SignがPDFPortfolioを使用して電子署名されたPDFと監査証跡レポートを結合していることを示すメッセージ（以下を参照）が表示されます。
+
+電子署名と監査証跡とともに文書コンテンツを表示するには、電子署名の管理 UI で「監査レポートを署名済みレンディションに添付」を「Acrobat Signレンディションを表示」に設定しないでください。
+
+署名済みのレンディションとは別のレンディションとして、Adobeの監査証跡をダウンロードまたは表示することができます。
+
+![画像](images/audit-trail-rendition-setup-4.png)
 
 ### 手順 9. Web アクションの更新 {#web-actions}
 
