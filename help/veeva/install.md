@@ -10,7 +10,7 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 08d55f79fd4fff8f13dc23b9d155e501ca038be1
+source-git-commit: c09759f2455b476fd1093d845cee4f5c3c3601d7
 workflow-type: tm+mt
 source-wordcount: '4169'
 ht-degree: 3%
@@ -289,13 +289,13 @@ Adobe Acrobat Signプロセスに適格なすべての文書分類に対して�
 
 新しいレンディションのタイプは *Adobe Signレンディション (adobe_sign_rendition__c)* は、Vault との統合によって、署名済みPDF文書をAdobe Acrobat Signにアップロードします。 Adobe Acrobat Signature に適格な各文書タイプに対してAdobe Signレンディションを宣言する必要があります。
 
-Adobe Acrobat Signature の対象となる各文書タイプに対して、元のレンディションを宣言する必要があります。
-
 ![レンディションの種類の画像](images/rendition-type.png)
 
 ![画像](images/edit-details-clinical.png)
 
 新しいレンディションのタイプは *元のレンディション* (original_rendition__c) は、Vault 統合で、オリジナルの表示可能なレンディションの保存に使用するレンディションの名前として使用されます（署名済みの文書が表示可能レンディションとしてインポートされる場合）。
+
+Adobe Acrobat Signature の対象となる各文書タイプに対して、元のレンディションを宣言する必要があります。
 
 ![画像](images/original-rendition.png)
 
