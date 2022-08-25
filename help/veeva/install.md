@@ -10,9 +10,9 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: c09759f2455b476fd1093d845cee4f5c3c3601d7
+source-git-commit: 00db62c894df93abac31bf8196730382d54e8fa0
 workflow-type: tm+mt
-source-wordcount: '4169'
+source-wordcount: '4176'
 ht-degree: 3%
 
 ---
@@ -320,7 +320,7 @@ Adobe Acrobat Signature の対象となる各文書タイプに対して、元�
 
 電子署名と監査証跡とともに文書コンテンツを表示するには、電子署名の管理 UI で「監査レポートを署名済みレンディションに添付」を「Acrobat Signレンディションを表示」に設定しないでください。
 
-署名済みのレンディションとは別のレンディションとして、Adobeの監査証跡をダウンロードまたは表示することができます。
+「Adobe監査追跡レンディション」機能を使用すると、署名済みレンディションとは別のレンディションとしてAdobe監査追跡をダウンロードまたは表示できます。
 
 ![画像](images/audit-trail-rendition-setup-4.png)
 
