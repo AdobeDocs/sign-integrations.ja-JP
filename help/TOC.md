@@ -2,10 +2,10 @@
 user-guide-title: Adobe Sign統合ガイド
 index: true
 role: Leader
-source-git-commit: 27610773d47a947dbfa1deb3f594667406a9aefb
+source-git-commit: 87818d90ab5e223d2d154f4449702e1c4c23473a
 workflow-type: tm+mt
-source-wordcount: '70'
-ht-degree: 32%
+source-wordcount: '68'
+ht-degree: 33%
 
 ---
 
@@ -13,7 +13,6 @@ ht-degree: 32%
 # Adobe Sign統合ガイド {#using}
 
 + [Adobe Signとの連携](home.md)
-+ [新機能](whats-new.md)
 + [製品バージョンとライフサイクル](versions.md)
 + Adobe Sign [!DNL Workday] {#workday}
    + [インストールガイド](workday/install.md)
